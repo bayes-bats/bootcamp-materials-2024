@@ -1,0 +1,94 @@
+---
+title: "Teaching Bayes: Challenges"
+subtitle: "Day 1"
+format: 
+  revealjs:
+    slide-number: true
+    incremental: true
+    theme: ["../../templates/slides-style.scss"]
+    logo: https://www.stat.uci.edu/bayes-bats/img/logo.png
+    title-slide-attributes: 
+      data-background-image: https://www.stat.uci.edu/bayes-bats/img/logo.png
+      data-background-size: 12%
+      data-background-position: 50% 85%
+---
+
+# Who Are You All and What Are You Teaching?
+
+
+## Disciplines You Represent
+
+| Discipline | Discipline |
+|------|------|
+| Aerospace Engineering    |  Logistics   |
+| Biology    | Mathematics   |
+| Biostatistics   | Mathematics Education   |
+| Business Information \& Analytics | Philosophy |
+| Computer Science | Physics |
+| Ecology  | Psychology |
+| Economics | Statistics  |
+
+
+## What Are You Teaching?
+
+- Anything related to Bayesian methods
+
+- It can be your plans
+
+- Let's hear from 2-3 of you!
+
+## Resources/Platforms for More Discussion
+
+- Check out the [Undergraduate Bayesian Education Network](https://undergrad-bayes.netlify.app/)
+
+    - A collection of teaching resources including courses, papers etc.
+    - We have a Slack space and organize check-ins for instructors who teach Bayes
+
+- Check out the [Bayesian Education Research and Practice](https://berap-isba.github.io/) section website of the [International Society for Bayesian Analysis](https://bayesian.org/)
+    
+    - We started a quarterly webinar series this year and feel free to watch the recordings of the [two Bayes textbook panels](https://berap-isba.github.io/events.html) so far
+    - Do you want to be a presenter/panelist in the future? If so, please get in touch with us (jihu@vassar.edu; mdogucu@uci.edu)
+
+- Do you have resources/platforms to share?
+
+# Small Group Discussion
+
+## Format and Length
+
+- About 30 minutes
+
+- 3-4 small groups, each led by one Instructor/TA
+
+- Random assignment; get to know people from a different discipline!
+
+- Assign a note-taker; if okay, please share notes with us afterwards
+
+- Assign a reporter for large group sharing (3 minutes per group)
+
+- Feel free to use our prepared questions and feel free to come up with your own
+
+
+## Discussion Questions
+
+1. Do you introduce Bayesian methods in your teaching, either as a module or as a standalone course? If so, what topics and at what levels? Do you follow a textbook? If not, what are your plans?
+
+2. Do you have challenges with regards to pre-reqs? If so, do you have solutions?
+
+3. Do you use certain software (other than R and Python and other programming languages) in your teaching? Do you have challenges with regards to Bayesian computing? If so, do you have solutions?
+
+4. Do you include certain Bayesian modeling techniques in your teaching? Do you have challenges with regards to Bayesian modeling? If so, do you have solutions?
+
+5. What is the one challenge you would like to get help with from BATS bootcamp?
+
+# Large Group Sharing
+
+## Format and Length
+
+- About 25 minutes
+
+- We will record this portion for sharing later. Okay?
+
+- Each group reports back for 3 minutes
+
+- Open discussion for remaining time
+

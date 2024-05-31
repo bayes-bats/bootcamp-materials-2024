@@ -1,0 +1,175 @@
+---
+title: "Welcome to Bayes BATS"
+format: 
+  revealjs:
+    slide-number: true
+    incremental: true
+    theme: ["../templates/slides-style.scss"]
+    logo: https://www.stat.uci.edu/bayes-bats/img/logo.png
+    title-slide-attributes: 
+      data-background-image: https://www.stat.uci.edu/bayes-bats/img/logo.png
+      data-background-size: 12%
+      data-background-position: 50% 75%
+    include-after-body: ../templates/clean_title_page.html
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {style="text-align: center;"}
+
+
+
+
+<img src="https://www.minedogucu.com/img/headshot.jpg"
+        alt="A headshot of a woman with curly, short, ear-length hair with green eyes and red lipstick."
+        style="width:165px; margin-top:20px; border: 3px solid whitesmoke; padding: 10px;">
+        
+[Mine Dogucu](https://www.minedogucu.com/) 
+
+:::
+:::
+
+::: {.column width="50%"}
+
+::: {style="text-align: center;"}
+
+
+<img src="https://globalhealth.duke.edu/sites/default/files/styles/person_headshot_default/public/faculty/amy-herring2.jpg?itok=Iy3_vnP-&h=9fe67f81"
+        alt="A headshot of a woman with long blonde hair"
+        style="width:165px; margin-top:20px; border: 3px solid whitesmoke; padding: 10px;">
+        
+
+[Amy Herring](https://globalhealth.duke.edu/people/herring-amy)
+
+:::
+:::
+
+
+
+::::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {style="text-align: center;"}
+
+
+
+<img src="https://pages.vassar.edu/jihu/files/2021/01/Monika2021-300x300.jpg"
+        alt="A headshot of a woman straight black hair and glasses"
+        style="width:165px; margin-top:20px; border: 3px solid whitesmoke; padding: 10px;">
+        
+[Jingchen (Monika) Hu](https://pages.vassar.edu/jihu/)
+
+:::
+:::
+
+::: {.column width="50%"}
+
+::: {style="text-align: center;"}
+
+
+
+
+<img src="https://stats68-sp21.netlify.app/img/federica-ricci.jpeg"
+        alt="A headshot of a woman with long blonde hair and bangs."
+        style="width:165px; margin-top:20px; border: 3px solid whitesmoke; padding: 10px;">
+        
+
+[Federica Zoe Ricci](https://federicazoe.github.io/)
+
+:::
+:::
+
+
+
+::::
+
+## 
+
+::: {.font75}
+
+Who Are You?
+
+:::
+
+Brief introductions.
+
+
+## BINGO!!!
+
+## 
+
+
+::: {.font75}
+
+A Brief Overview of the Week
+
+:::
+
+
+::: {.callout-important collapse="true"}
+
+## Bookmark please
+
+[bayes-bats.github.io/bootcamp-material](https://bayes-bats.github.io/bootcamp-material/)
+
+[github.com/bayes-bats](https://github.com/bayes-bats)
+:::
+
+
+##
+
+::: {.font75}
+
+A Brief Overview of UCI campus map
+
+:::
+
+[Interactive Map](https://map.uci.edu/?id=463#!ct/61979?s/)
+
+## Suggested Social Activity
+
+Monday: [University Town Center (UTC)](https://www.shopirvinecompany.com/centers/irvine/university-center)
+
+Tuesday: Hiking in [Crystal Cove State Park](http://www.crystalcovestatepark.org/hiking-2/) / [Bommer Canyon Trail](https://letsgooutside.org/explore/bommer-canyon/) / [UCI Ecological Reserve](https://ecopreserve.ucnrs.org)
+
+Wednesday: Costa Mesa
+
+Thursday: Laguna Beach
+
+Friday: Stay out of traffic if you can
+
+Slack channel `#social`
+
+## 
+
+::: {.font75}
+
+What is ahead after the bootcamp?
+
+:::
+
+- Tier 2 & Tier 3 discussion
+
+- [Tier 2 Application form](https://duke.qualtrics.com/jfe/form/SV_bmvqDdmb5s0e8yq)
+
+- Tier 2 Application deadline: July 21st
+
+## Links
+
+[What if I have a medical emergency?](https://shc.uci.edu/sites/default/files/insurance/docs/uci-med-brochure-rev4.pdf)
+
+[UCI PD](https://www.police.uci.edu/)
+
+## Photo Day
+
+Thursday afternoon we will have a photographer come in from Communications to take our photo as a group. 
+
+## Social Media
+
+Please put a big cross mark on your name tag to indicate that you do not want to be photographed/your photo to be shared. 
+Otherwise we/other participants will assume you are ok with being photographed and your photo being shared. 
+
+If you share any photos/news/comments on social media feel free to use `#BayesBATS`.

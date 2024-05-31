@@ -1,0 +1,29 @@
+---
+title: "Designing a hierachical case study"
+subtitle: "Day 5"
+title-block-banner: true
+format:
+  html:
+    toc: true
+    toc-title: "Content"
+    toc-location: left
+    html-math-method: katex
+    theme: ["../../templates/activity-style.scss"]
+    page-layout: full
+---
+
+## Goals for the Afternoon
+
+-   Consider learning objectives and goals for a hierarchical modeling lab
+
+-   Identify interesting data to use in a linear regression lab (longitudinal sleep study data can be used as backup -- one analysis is outlined in Bayes Rules! questions 17.6-17.9)
+
+-   Write lab prompts and solutions for class!
+
+## Sample Lab Materials
+
+-   Take 15 minutes to review the exercises on humidity and (time permitting) penguins in [section 16.9.2 of Bayes Rules!  ](https://www.bayesrulesbook.com/chapter-16.html#exercises-15) and (time permitting) [section 17.9.2 of Bayes Rules!](https://www.bayesrulesbook.com/chapter-17.html#applied-exercises-9). Start making notes about what types of questions  you want your students to address, and think about possible data sets for analysis. Be prepared to share one primary concept you would like your students to encounter in the lab.
+
+-   Full group: sharing
+
+-   Small groups: based on topical interests, split into groups and develop lab activities!
