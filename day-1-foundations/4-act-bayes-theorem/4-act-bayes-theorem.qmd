@@ -26,7 +26,7 @@ Discuss the following questions in groups before starting to design your activit
 
 The Beta-Binomial model is so simple, yet so powerful in teaching foundational Bayesian concept. It is also [the most popular](https://www.tandfonline.com/doi/full/10.1080/00031305.2022.2089232) in teaching foundational concepts. 
 
-The possibilities in utilizing this model are endless and can range from teaching with math and computation or [with little math and no computation](https://arxiv.org/abs/2304.01276). 
+The possibilities in utilizing this model are endless and can range from teaching with math and computation or [with little math and no computation](https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2362148). 
 
 We will learn more complex models soon but for now our goal is to design an activity that conveys the foundations of Bayes theorem using the Beta-Binomial model. 
 
