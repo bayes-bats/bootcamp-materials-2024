@@ -68,7 +68,7 @@ Each day of the bootcamp, the learning material will be distributed to each part
 
 ## Technical Setup Before the Bootcamp
 
--   **Sign up for GitHub** [`r fontawesome::fa(name = "link")`](https://github.com) Sign up for a free GitHub account if you don't already have one. Make sure to pick a username that you feel comfortable sharing on your CV. You will most likely use your GitHub username for many years in your data science career. Fill out [this survey](https://forms.gle/XBrrS4TM2rR7xyTg6) to let us know what your username is. Many of you have already done this.
+-   **Sign up for GitHub** [`r fontawesome::fa(name = "link")`](https://github.com) Sign up for a free GitHub account if you don't already have one. Make sure to pick a username that you feel comfortable sharing on your CV. You will most likely use your GitHub username for many years in your data science career. Fill out [this survey](https://forms.gle/ZWje6VbwiuGo7dWN7) to let us know what your username is. Many of you have already done this. Using these usernames, we will send out an invitation to you become a member of the GitHub organization `bayes-bats` please accept this invitation. If you have not received your invitation please send a gentle reminder to Szofia on Slack.
 
 -   **Install R** [`r fontawesome::fa(name = "link")`](https://mirror.las.iastate.edu/CRAN/) Yes, you do need to download and install R even if you have downloaded before. There is a newer version.
 
@@ -78,23 +78,21 @@ Each day of the bootcamp, the learning material will be distributed to each part
 
 -   **Test your installations** [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7998123&node=34055987&a=84256585&autoplay=1)
 
--   If you run into any issues about the tech setup please feel free to let us know in advance. <!--Federica will hold office hours on XXX. You can join the office hours using the zoom link.--> You can also feel free to ask questions on the #bootcamp channel on Slack. 
-<!-- Federica will also be holding office hours and you will receive the appropriate zoom links via email from her. -->
+-   If you run into any issues about the tech setup please feel free to let us know in advance. You can also feel free to ask questions on the #bootcamp channel on Slack. 
 
-<!-- ## Day 0 - Introduction to the Toolkit -->
+## Day 0 - Introduction to the Toolkit 
 
-<!-- Videos to be watched before the bootcamp. If you run into any issues about this content please let us know in advance. <!--Federica will hold office hours on XXX. You can join the office hours using the zoom link.--> 
-<!-- You can also feel free to ask questions on the #bootcamp channel on Slack. --> 
+Videos to be watched before the bootcamp. If you run into any issues about this content please let us know in advance. You can feel free to ask questions on the #bootcamp channel on Slack.
 
-<!-- | Topic                  | Materials                                                                                                                                                                                                          | -->
-<!-- |-----------------------------------------------|-------------------------| -->
-<!-- | Overview               | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7997841&node=34055000&a=198253550&autoplay=1)                                                                                                 | -->
-<!-- | hello woRld            | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7998435&node=34057183&a=136917506&autoplay=1) [`r fontawesome::fa(name = "desktop")`](day-0-prerequisites/1-lec-r-basics/1-lec-r-basics.html) | -->
-<!-- | Introduction to Quarto | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7998520&node=34057485&a=212583999&autoplay=1) [`r fontawesome::fa(name = "desktop")`](day-0-prerequisites/2-lec-quarto/2-lec-quarto.html)     | -->
-<!-- | Git/GitHub             | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7999068&node=34059613&a=192345937&autoplay=1) [`r fontawesome::fa(name = "desktop")`](day-0-prerequisites/3-lec-github/3-lec-github.html)     | -->
-<!-- | ggplot                 | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7998687&node=34058227&a=75458400&autoplay=1) [`r fontawesome::fa(name = "desktop")`](day-0-prerequisites/4-lec-ggplot/4-lec-ggplot.html)      | -->
-<!-- | Data Wrangling         | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7998875&node=34058869&a=77289457&autoplay=1) [`r fontawesome::fa(name = "desktop")`](day-0-prerequisites/5-lec-wrangle/5-lec-wrangle.html)    | -->
-<!-- | Workflow               | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7998997&node=34059344&a=179917770&autoplay=1) [`r fontawesome::fa(name = "desktop")`](day-0-prerequisites/6-lec-workflow/6-lec-workflow.html) | -->
+| Topic                  | Materials                                                                                                                                                                                                          |
+|-----------------------------------------------|-------------------------|
+| Overview               | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7997841&node=34055000&a=198253550&autoplay=1)                                                                                                 |
+| hello woRld            | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7998435&node=34057183&a=136917506&autoplay=1) [`r fontawesome::fa(name = "desktop")`](day-0-prerequisites/1-lec-r-basics/1-lec-r-basics.html) |
+| Introduction to Quarto | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7998520&node=34057485&a=212583999&autoplay=1) [`r fontawesome::fa(name = "desktop")`](day-0-prerequisites/2-lec-quarto/2-lec-quarto.html)     |
+| Git/GitHub             | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7999068&node=34059613&a=192345937&autoplay=1) [`r fontawesome::fa(name = "desktop")`](day-0-prerequisites/3-lec-github/3-lec-github.html)     |
+| ggplot                 | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7998687&node=34058227&a=75458400&autoplay=1) [`r fontawesome::fa(name = "desktop")`](day-0-prerequisites/4-lec-ggplot/4-lec-ggplot.html)      |
+| Data Wrangling         | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7998875&node=34058869&a=77289457&autoplay=1) [`r fontawesome::fa(name = "desktop")`](day-0-prerequisites/5-lec-wrangle/5-lec-wrangle.html)    |
+| Workflow               | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7998997&node=34059344&a=179917770&autoplay=1) [`r fontawesome::fa(name = "desktop")`](day-0-prerequisites/6-lec-workflow/6-lec-workflow.html) |
 
 <!-- ## Day 1 - Foundation of Bayesian inference -->
 
