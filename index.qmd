@@ -80,7 +80,7 @@ Each day of the bootcamp, the learning material will be distributed to each part
 
 -   If you run into any issues about the tech setup please feel free to let us know in advance. You can also feel free to ask questions on the #bootcamp channel on Slack. 
 
-## Day 0 - Introduction to the Toolkit 
+## Day 0 part 1 - Introduction to the Toolkit 
 
 Videos to be watched before the bootcamp. If you run into any issues about this content please let us know in advance. You can feel free to ask questions on the #bootcamp channel on Slack.
 
@@ -93,6 +93,39 @@ Videos to be watched before the bootcamp. If you run into any issues about this 
 | ggplot                 | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7998687&node=34058227&a=75458400&autoplay=1) [`r fontawesome::fa(name = "desktop")`](day-0-prerequisites/4-lec-ggplot/4-lec-ggplot.html)      |
 | Data Wrangling         | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7998875&node=34058869&a=77289457&autoplay=1) [`r fontawesome::fa(name = "desktop")`](day-0-prerequisites/5-lec-wrangle/5-lec-wrangle.html)    |
 | Workflow               | [`r fontawesome::fa(name = "video")`](https://uci.yuja.com/V/Video?v=7998997&node=34059344&a=179917770&autoplay=1) [`r fontawesome::fa(name = "desktop")`](day-0-prerequisites/6-lec-workflow/6-lec-workflow.html) |
+
+## Day 0 part 2 - Probability and Statistics Review 
+
+**Topic 1: Conditional probability**
+
+- Overview: Conditional probability is a concept key to understanding Bayes’ theorem and its application.
+- We love the description of the concept at [here](https://seeing-theory.brown.edu/compound-probability/index.html#section3), which was inspired by [this](https://setosa.io/conditional/).
+
+The next four topics are based on the open access intro statistics textbook [OpenIntro IMS](https://openintro-ims.netlify.app/). OpenIntro IMS has an emphasis on simulation-based inference, and hence you will see terms such as bootstrap in many chapters (e.g., Chapters 11 and 12). For the purpose of preparing for Bayes BATS bootcamp, we will focus on Central Limit Theorem-based inference, also called mathematical modeling by OpenInro IMS, as in Chapter 13. As you go over Chapters 14 and 16, you will encounter bootstrap methods and don’t worry if you don’t have the time to fully digest these portions. Focus on the mathematical modeling approaches in Chapters 14 and 16 will suffice.
+
+**Topic 2: Chapter 7 Linear regression with a single predictor** [link](https://openintro-ims.netlify.app/model-slr)
+
+- Overview: This chapter is to help you with Day 4 materials of Bayes BATS bootcamp.
+- Exercises: 7, 9, 19, 21, 23, 27 (solutions are included in Appendix A).
+- For more details, see [here](https://online.stat.psu.edu/stat501/lesson/1).
+- For visual learners, check out [this](https://seeing-theory.brown.edu/regression-analysis/index.html#section1).
+- (Check out optional Chapter 8 Linear regression with multiple predictors.) 
+
+**Topic 3: Chapter 13 Inference with mathematical modeling** [link](https://openintro-ims.netlify.app/foundations-mathematical)
+
+- Overview: This chapter is to help you with Day 5 materials of Bayes BATS bootcamp.
+- Exercises: 1, 3, 5 (solutions are included in Appendix A).
+- For visual learners, check out [this](https://seeing-theory.brown.edu/frequentist-inference/index.html#section1).
+
+**Topic 4: Chapter 14 Decision errors** [link](https://openintro-ims.netlify.app/decerr)
+
+- Overview: This chapter is to help you with Day 5 materials of Bayes BATS bootcamp.
+- Exercises: 1, 3, 5 (solutions are included in Appendix A).
+
+**Topic 5: Chapter 16 Inference for a single proportion** [link](https://openintro-ims.netlify.app/inference-one-prop)
+
+- Overview: This chapter is to help you with Day 5 materials of Bayes BATS bootcamp.
+- Exercises: 1, 13, 17, 19, 23, 27 (solutions are included in Appendix A).
 
 <!-- ## Day 1 - Foundation of Bayesian inference -->
 
