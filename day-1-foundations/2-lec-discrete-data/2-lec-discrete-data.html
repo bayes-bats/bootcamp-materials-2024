@@ -8,7 +8,7 @@
 <link href="2-lec-discrete-data_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="2-lec-discrete-data_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="2-lec-discrete-data_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.353">
+  <meta name="generator" content="quarto-1.4.555">
 
   <title>Discrete Response Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -30,7 +30,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -220,7 +220,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -425,36 +426,36 @@
 <h2>Plotting the Continuous Prior</h2>
 <p>For each of the following students’ prior ideas for <span class="math inline">\(\pi\)</span>, we plot the pdf of a prior.</p>
 <ul>
-<li class="fragment"><p>Bahar thinks that it is extremely difficult to get into this program.</p></li>
-<li class="fragment"><p>Vish thinks that it is difficult to get into this program.</p></li>
-<li class="fragment"><p>Gabriela does not have any strong opinions whether it is difficult or easy to get into this program.</p></li>
-<li class="fragment"><p>Wei thinks that it is easy to get into this program.</p></li>
-<li class="fragment"><p>Beyoncé thinks that it is extremely easy to get into this program.</p></li>
+<li class="fragment"><p>Katie thinks that it is extremely difficult to get into this program.</p></li>
+<li class="fragment"><p>Sha’Carri thinks that it is difficult to get into this program.</p></li>
+<li class="fragment"><p>Caeleb does not have any strong opinions whether it is difficult or easy to get into this program.</p></li>
+<li class="fragment"><p>Sunisa thinks that it is easy to get into this program.</p></li>
+<li class="fragment"><p>Simone thinks that it is extremely easy to get into this program.</p></li>
 </ul>
 </section>
-<section id="bahars-prior" class="slide level2">
-<h2>Bahar’s prior</h2>
+<section id="katies-prior" class="slide level2">
+<h2>Katie’s prior</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch quarto-figure-center"><ul>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><ul>
 <li class="fragment">Note: it’s the area under the curve here that represents the probability (the total of which is 1), not the value <span class="math inline">\(f(\pi)\)</span></li>
 </ul>
 </section>
-<section id="vishs-prior" class="slide level2">
-<h2>Vish’s prior</h2>
+<section id="shacarris-prior" class="slide level2">
+<h2>Sha’Carri’s prior</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch quarto-figure-center"></section>
-<section id="gabrielas-prior" class="slide level2">
-<h2>Gabriela’s prior</h2>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="caelebs-prior" class="slide level2">
+<h2>Caeleb’s prior</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch quarto-figure-center"></section>
-<section id="weis-prior" class="slide level2">
-<h2>Wei’s prior</h2>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="sunisas-prior" class="slide level2">
+<h2>Sunisa’s prior</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch quarto-figure-center"></section>
-<section id="beyoncés-prior" class="slide level2">
-<h2>Beyoncé’s prior</h2>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="simones-prior" class="slide level2">
+<h2>Simone’s prior</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="beta-prior-model" class="slide level2">
 <h2>Beta Prior Model</h2>
 <p>Let <span class="math inline">\(\pi\)</span> be a random variable which can take any value between 0 and 1, ie. <span class="math inline">\(\pi \in [0,1]\)</span>. Then the variability in <span class="math inline">\(\pi\)</span> might be well modeled by a Beta model with <strong>shape parameters</strong> <span class="math inline">\(\alpha &gt; 0\)</span> and <span class="math inline">\(\beta &gt; 0\)</span>:</p>
@@ -465,13 +466,17 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <section id="beta-prior-model-1" class="slide level2">
 <h2>Beta Prior Model</h2>
 <div class="columns">
-<div class="column" style="width:70%;">
+<div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+</figure>
 </div>
 </div>
-</div><div class="column" style="width:30%;">
+</div>
+</div><div class="column" style="width:50%;">
 <p><span class="math inline">\(\pi \sim \text{Beta}(3, 8)\)</span></p>
 <p><span class="math inline">\(f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-1} (1-\pi)^{\beta-1}\)</span></p>
 <p><span class="math inline">\(f(\pi) = \frac{\Gamma(3 + 11)}{\Gamma(3)\Gamma(8)} 0.5^{3-1} (1-0.5)^{8-1}\)</span></p>
@@ -487,14 +492,18 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <div class="column" style="width:70%;">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div><div class="column" style="width:30%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">dbeta</span>(<span class="at">x =</span> <span class="fl">0.5</span>, </span>
-<span id="cb1-2"><a href="#cb1-2"></a>      <span class="at">shape1 =</span> <span class="dv">3</span>, </span>
-<span id="cb1-3"><a href="#cb1-3"></a>      <span class="at">shape2 =</span> <span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">dbeta</span>(<span class="at">x =</span> <span class="fl">0.5</span>, </span>
+<span id="cb1-2"><a href=""></a>      <span class="at">shape1 =</span> <span class="dv">3</span>, </span>
+<span id="cb1-3"><a href=""></a>      <span class="at">shape2 =</span> <span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.703125</code></pre>
 </div>
@@ -505,7 +514,7 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <section id="plotting-the-beta-prior" class="slide level2">
 <h2>Plotting the Beta Prior</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="plotting-the-beta-prior-with-bayesrules-package" class="slide level2">
 <h2>Plotting the Beta Prior with <code>bayesrules</code> package</h2>
 <p>Use the <code>plot_beta()</code> function in the <code>bayesrules</code> package to try different shape parameters. Example:</p>
@@ -518,7 +527,11 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <div id="tabset-1-2">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -535,9 +548,9 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <h2>Beta Descriptives with <code>bayesrules</code> package</h2>
 <p>Use the <code>summarize_beta()</code> function in the <code>bayesrules</code> package to find the mean, mode, and variance of various Beta distributions. Example:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="in">```{r}</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">summarize_beta</span>(<span class="at">alpha =</span> <span class="dv">5</span>, <span class="at">beta =</span> <span class="dv">7</span>)</span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href=""></a><span class="in">```{r}</span></span>
+<span id="cb4-2"><a href=""></a><span class="in">summarize_beta(alpha = 5, beta = 7)</span></span>
+<span id="cb4-3"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       mean mode        var        sd
 1 0.4166667  0.4 0.01869658 0.1367354</code></pre>
@@ -566,19 +579,19 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 </div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a><span class="in">```{r fig.align='center', fig.height=4}</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">plot_beta</span>(<span class="dv">5</span>, <span class="dv">35</span>) <span class="sc">+</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a>    <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">20</span>)) </span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href=""></a><span class="in">```{r fig.align='center', fig.height=4}</span></span>
+<span id="cb6-2"><a href=""></a><span class="in">plot_beta(5, 35) +</span></span>
+<span id="cb6-3"><a href=""></a><span class="in">    theme(text = element_text(size=20)) </span></span>
+<span id="cb6-4"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="summarizing-the-prior" class="slide level2">
 <h2>Summarizing the Prior</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a><span class="in">```{r}</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">summarize_beta</span>(<span class="dv">5</span>, <span class="dv">35</span>)</span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href=""></a><span class="in">```{r}</span></span>
+<span id="cb7-2"><a href=""></a><span class="in">summarize_beta(5, 35)</span></span>
+<span id="cb7-3"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   mean      mode         var         sd
 1 0.125 0.1052632 0.002667683 0.05164962</code></pre>
@@ -635,7 +648,7 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <section id="plotting-the-posterior" class="slide level2">
 <h2>Plotting the Posterior</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-15-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="summarizing-the-posterior" class="slide level2">
 <h2>Summarizing the Posterior</h2>
 <div class="cell">
@@ -648,11 +661,11 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <section id="plot-summary" class="slide level2">
 <h2>Plot Summary</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-18-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="balancing-act" class="slide level2">
 <h2>Balancing Act</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-20-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="posterior-descriptives" class="slide level2">
 <h2>Posterior Descriptives</h2>
 <p><span class="math inline">\(\pi|(Y=y) \sim \text{Beta}(\alpha+y, \beta+n-y)\)</span></p>
@@ -691,7 +704,7 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <h2>Different Priors, Different Posteriors</h2>
 <p>Let <span class="math inline">\(\pi\)</span> be the the proportion of movies that pass the Bechdel test.</p>
 <p>The table shows three different people with three different priors about <span class="math inline">\(\pi\)</span>.</p>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: center;">Optimist</th>
@@ -712,7 +725,7 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <section id="priors" class="slide level2">
 <h2>Priors</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-22-1.png" width="1248" class="r-stretch quarto-figure-center"></section>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-22-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1248"></section>
 <section id="vocabulary" class="slide level2">
 <h2>Vocabulary</h2>
 <p><strong>Informative prior:</strong> An informative prior reflects specific information about the unknown variable with high certainty (ie. low variability).</p>
@@ -731,18 +744,18 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <section id="section-1" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">library</span>(bayesrules)</span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="fu">set.seed</span>(<span class="dv">84735</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb11-2"><a href=""></a><span class="fu">library</span>(bayesrules)</span>
+<span id="cb11-3"><a href=""></a><span class="fu">set.seed</span>(<span class="dv">84735</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>bechdel_sample <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(bechdel, <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a>bechdel_sample <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(bechdel, <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">count</span>(bechdel_sample, binary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="fu">count</span>(bechdel_sample, binary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
   binary     n
@@ -766,7 +779,7 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <section id="the-optimist-1" class="slide level2">
 <h2>The Optimist</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-27-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="the-clueless" class="slide level2">
 <h2>The Clueless</h2>
 <div class="cell">
@@ -780,7 +793,7 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <section id="the-clueless-1" class="slide level2">
 <h2>The Clueless</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-29-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="the-pessimist" class="slide level2">
 <h2>The Pessimist</h2>
 <div class="cell">
@@ -794,20 +807,20 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <section id="the-pessimist-1" class="slide level2">
 <h2>The Pessimist</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-31-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-31-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="comparison" class="slide level2">
 <h2>Comparison</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-32-1.png" width="1440" class="r-stretch quarto-figure-center"></section>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-32-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1440"></section>
 <section id="different-data-different-posteriors" class="slide level2">
 <h2>Different Data, Different Posteriors</h2>
-<p>Oksana, Omari, and Orlando all share the optimistic Beta(14,1) prior for <span class="math inline">\(\pi\)</span> but each have access to different data. Oksana reviews movies from 1991. Omari reviews movies from 2000, and Orlando reviews movies from 2013. How will the posterior distribution for each differ?</p>
+<p>Quincy, Steph, and Noah all share the optimistic Beta(14,1) prior for <span class="math inline">\(\pi\)</span> but each have access to different data. Quincy reviews movies from 1991. Steph reviews movies from 2000, and Noah reviews movies from 2013. How will the posterior distribution for each differ?</p>
 </section>
-<section id="oksanas-data" class="slide level2">
-<h2>Oksana’s Data</h2>
+<section id="quincys-data" class="slide level2">
+<h2>Quincy’s Data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>bechdel_1991 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bechdel, year <span class="sc">==</span> <span class="dv">1991</span>)</span>
-<span id="cb18-2"><a href="#cb18-2"></a><span class="fu">count</span>(bechdel_1991, binary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href=""></a>bechdel_1991 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bechdel, year <span class="sc">==</span> <span class="dv">1991</span>)</span>
+<span id="cb18-2"><a href=""></a><span class="fu">count</span>(bechdel_1991, binary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
   binary     n
@@ -815,21 +828,21 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 1 FAIL       7
 2 PASS       6</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="dv">6</span><span class="sc">/</span><span class="dv">13</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href=""></a><span class="dv">6</span><span class="sc">/</span><span class="dv">13</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.4615385</code></pre>
 </div>
 </div>
 </section>
-<section id="oksanas-analysis" class="slide level2">
-<h2>Oksana’s Analysis</h2>
+<section id="quincys-analysis" class="slide level2">
+<h2>Quincy’s Analysis</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-34-1.png" width="960" class="r-stretch quarto-figure-center"></section>
-<section id="omaris-data" class="slide level2">
-<h2>Omari’s Data</h2>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-34-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="stephs-data" class="slide level2">
+<h2>Steph’s Data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>bechdel_2000 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bechdel, year <span class="sc">==</span> <span class="dv">2000</span>)</span>
-<span id="cb22-2"><a href="#cb22-2"></a><span class="fu">count</span>(bechdel_2000, binary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href=""></a>bechdel_2000 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bechdel, year <span class="sc">==</span> <span class="dv">2000</span>)</span>
+<span id="cb22-2"><a href=""></a><span class="fu">count</span>(bechdel_2000, binary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
   binary     n
@@ -837,21 +850,21 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 1 FAIL      34
 2 PASS      29</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="dv">29</span><span class="sc">/</span>(<span class="dv">34</span><span class="sc">+</span><span class="dv">29</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href=""></a><span class="dv">29</span><span class="sc">/</span>(<span class="dv">34</span><span class="sc">+</span><span class="dv">29</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.4603175</code></pre>
 </div>
 </div>
 </section>
-<section id="omaris-analysis" class="slide level2">
-<h2>Omari’s Analysis</h2>
+<section id="stephs-analysis" class="slide level2">
+<h2>Steph’s Analysis</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-36-1.png" width="960" class="r-stretch quarto-figure-center"></section>
-<section id="orlandos-data" class="slide level2">
-<h2>Orlando’s Data</h2>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-36-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="noahs-data" class="slide level2">
+<h2>Noah’s Data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>bechdel_2013 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bechdel, year <span class="sc">==</span> <span class="dv">2013</span>)</span>
-<span id="cb26-2"><a href="#cb26-2"></a><span class="fu">count</span>(bechdel_2013, binary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href=""></a>bechdel_2013 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bechdel, year <span class="sc">==</span> <span class="dv">2013</span>)</span>
+<span id="cb26-2"><a href=""></a><span class="fu">count</span>(bechdel_2013, binary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
   binary     n
@@ -859,20 +872,20 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 1 FAIL      53
 2 PASS      46</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="dv">46</span><span class="sc">/</span>(<span class="dv">53</span><span class="sc">+</span><span class="dv">46</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href=""></a><span class="dv">46</span><span class="sc">/</span>(<span class="dv">53</span><span class="sc">+</span><span class="dv">46</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.4646465</code></pre>
 </div>
 </div>
 </section>
-<section id="orlandos-analysis" class="slide level2">
-<h2>Orlando’s Analysis</h2>
+<section id="noahs-analysis" class="slide level2">
+<h2>Noah’s Analysis</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-38-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="summary" class="slide level2">
 <h2>Summary</h2>
 
-<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-40-1.png" width="960" class="r-stretch quarto-figure-center"></section></section>
+<img data-src="2-lec-discrete-data_files/figure-revealjs/unnamed-chunk-40-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section></section>
 <section>
 <section id="sequential-updating" class="title-slide slide level1 center">
 <h1>Sequential Updating</h1>
@@ -887,8 +900,8 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <p>Suppose our prior a movie passes the Bechdel test is an optimistic <span class="math inline">\(\pi \sim Beta(14,1)\)</span>. Now let’s look at the 1970 movies.</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>bechdel <span class="sc">%&gt;%</span> </span>
-<span id="cb30-2"><a href="#cb30-2"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">1970</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href=""></a>bechdel <span class="sc">%&gt;%</span> </span>
+<span id="cb30-2"><a href=""></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">1970</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 3
    year title                          binary
@@ -901,7 +914,7 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <section id="the-posterior" class="slide level2">
 <h2>The Posterior</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">summarize_beta_binomial</span>(<span class="dv">14</span>, <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href=""></a><span class="fu">summarize_beta_binomial</span>(<span class="dv">14</span>, <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      model alpha beta      mean mode         var         sd
 1     prior    14    1 0.9333333    1 0.003888889 0.06236096
@@ -915,8 +928,8 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <p>Let’s look at the 1971 movies that have been rated.</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>bechdel <span class="sc">%&gt;%</span> </span>
-<span id="cb34-2"><a href="#cb34-2"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">1971</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href=""></a>bechdel <span class="sc">%&gt;%</span> </span>
+<span id="cb34-2"><a href=""></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">1971</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 3
    year title                                   binary
@@ -933,7 +946,7 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <section id="the-posterior-1" class="slide level2">
 <h2>The Posterior</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">summarize_beta_binomial</span>(<span class="dv">15</span>, <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">n =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href=""></a><span class="fu">summarize_beta_binomial</span>(<span class="dv">15</span>, <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">n =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      model alpha beta      mean      mode         var         sd
 1     prior    15    1 0.9375000 1.0000000 0.003446691 0.05870853
@@ -946,8 +959,8 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <p>New prior incorporating 1971 data: <span class="math inline">\(\pi \sim Beta(15,6)\)</span></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>bechdel <span class="sc">%&gt;%</span> </span>
-<span id="cb38-2"><a href="#cb38-2"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">1972</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href=""></a>bechdel <span class="sc">%&gt;%</span> </span>
+<span id="cb38-2"><a href=""></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">1972</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
    year title          binary
@@ -962,7 +975,7 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <section id="the-posterior-2" class="slide level2">
 <h2>The Posterior</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">summarize_beta_binomial</span>(<span class="dv">15</span>, <span class="dv">6</span>, <span class="at">y =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href=""></a><span class="fu">summarize_beta_binomial</span>(<span class="dv">15</span>, <span class="dv">6</span>, <span class="at">y =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      model alpha beta      mean      mode         var         sd
 1     prior    15    6 0.7142857 0.7368421 0.009276438 0.09631427
@@ -972,7 +985,7 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 </section>
 <section id="summary-1" class="slide level2">
 <h2>Summary</h2>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th>Time</th>
@@ -1006,7 +1019,7 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 </section>
 <section id="data-order-invariance" class="slide level2">
 <h2>Data Order Invariance</h2>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th>Time</th>
@@ -1041,7 +1054,7 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 </section>
 <section id="what-if-we-observe-all-the-data-at-once" class="slide level2">
 <h2>What If We Observe All the Data at Once?</h2>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th>Time</th>
@@ -1092,9 +1105,11 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 <p>Let <span class="math inline">\(\theta\)</span> be any parameter of interest with prior pdf <span class="math inline">\(f(\theta)\)</span>. Then a <strong>sequential analysis</strong> in which we <em>first</em> observe a data point <span class="math inline">\(y_1\)</span> and <em>then</em> a second data point <span class="math inline">\(y_2\)</span> will produce the same posterior model of <span class="math inline">\(\theta\)</span> as if we <em>first</em> observed <span class="math inline">\(y_2\)</span> and <em>then</em> <span class="math inline">\(y_1\)</span>:</p>
 <p><span class="math display">\[f(\theta | y_1,y_2) = f(\theta|y_2,y_1)\;.\]</span></p>
 <p>Similarly, the posterior model is invariant to whether we observe the data <em>all at once</em> or <em>sequentially</em>.</p>
+<div class="quarto-auto-generated-content">
+<p><img src="https://www.stat.uci.edu/bayes-bats/img/logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
 
-<img src="https://www.stat.uci.edu/bayes-bats/img/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
-
+</div>
 </div>
 </section></section>
     </div>
@@ -1123,7 +1138,6 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1422,10 +1436,27 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1435,8 +1466,17 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1450,7 +1490,11 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

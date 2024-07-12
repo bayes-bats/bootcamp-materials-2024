@@ -44,19 +44,19 @@ $f(\pi)$ can be used to *compare* the plausibility of two different values of $\
 
 For each of the following students' prior ideas for $\pi$, we plot the pdf of a prior.   
 
--   Bahar thinks that it is extremely difficult to get into this program.
+-   Katie thinks that it is extremely difficult to get into this program.
 
--   Vish thinks that it is difficult to get into this program. 
+-   Sha'Carri thinks that it is difficult to get into this program. 
 
--   Gabriela does not have any strong opinions whether it is difficult or easy to get into this program. 
+-   Caeleb does not have any strong opinions whether it is difficult or easy to get into this program. 
 
--   Wei thinks that it is easy to get into this program.
+-   Sunisa thinks that it is easy to get into this program.
 
--   Beyoncé thinks that it is extremely easy to get into this program.
+-   Simone thinks that it is extremely easy to get into this program.
 
 
 
-## Bahar's prior
+## Katie's prior
 
 ```{r echo = FALSE, fig.align='center'}
 library(tidyverse)
@@ -70,7 +70,7 @@ plot_beta(1, 5) +
 
 -   Note: it's the area under the curve here that represents the probability (the total of which is 1), not the value $f(\pi)$
 
-## Vish's prior
+## Sha'Carri's prior
 
 ```{r echo = FALSE, fig.align='center'}
 plot_beta(2, 5) +
@@ -80,7 +80,7 @@ plot_beta(2, 5) +
 
 
 
-## Gabriela's prior
+## Caeleb's prior
 
 ```{r echo = FALSE, fig.align='center'}
 plot_beta(1, 1) +
@@ -90,7 +90,7 @@ plot_beta(1, 1) +
 
 
 
-## Wei's prior
+## Sunisa's prior
 
 ```{r echo = FALSE, fig.align='center'}
 plot_beta(5, 3) +
@@ -100,7 +100,7 @@ plot_beta(5, 3) +
 
 
 
-## Beyoncé's prior
+## Simone's prior
 
 ```{r echo = FALSE, fig.align='center'}
 plot_beta(5, 1) +
@@ -128,7 +128,7 @@ f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-
 
 :::: {.columns}
 
-::: {.column width="70%"}
+::: {.column width="50%"}
 ```{r echo = FALSE, fig.height=5.5}
 plot_beta(3, 8) +
   theme(text = element_text(size=20)) +
@@ -139,7 +139,7 @@ plot_beta(3, 8) +
 ```
 :::
 
-::: {.column width="30%"}
+::: {.column width="50%"}
 
 $\pi \sim \text{Beta}(3, 8)$
 
@@ -635,10 +635,10 @@ gridExtra::grid.arrange(optimist,  clueless, pessimist, ncol=3)
 
 ## Different Data, Different Posteriors
 
-Oksana, Omari, and Orlando all share the optimistic Beta(14,1) prior for $\pi$ but each have access to different data. Oksana reviews movies from 1991. Omari reviews movies from 2000, and Orlando reviews movies from 2013. How will the posterior distribution for each differ?
+Quincy, Steph, and Noah all share the optimistic Beta(14,1) prior for $\pi$ but each have access to different data. Quincy reviews movies from 1991. Steph reviews movies from 2000, and Noah reviews movies from 2013. How will the posterior distribution for each differ?
 
 
-## Oksana's Data
+## Quincy's Data
 
 ```{r, echo=TRUE}
 bechdel_1991 <- filter(bechdel, year == 1991)
@@ -651,7 +651,7 @@ count(bechdel_1991, binary)
 
 
 
-## Oksana's Analysis
+## Quincy's Analysis
 
 ```{r fig.height=5, fig.align="center"}
 plot_beta_binomial(14, 1, y = 6, n = 13)
@@ -659,7 +659,7 @@ plot_beta_binomial(14, 1, y = 6, n = 13)
 
 
 
-## Omari's Data
+## Steph's Data
 
 ```{r, echo=TRUE}
 bechdel_2000 <- filter(bechdel, year == 2000)
@@ -671,7 +671,7 @@ count(bechdel_2000, binary)
 
 
 
-## Omari's Analysis
+## Steph's Analysis
 
 ```{r fig.height=5, fig.align="center"}
 plot_beta_binomial(14, 1, y = 29, n = 63)
@@ -679,7 +679,7 @@ plot_beta_binomial(14, 1, y = 29, n = 63)
 
 
 
-## Orlando's Data
+## Noah's Data
 
 ```{r, echo=TRUE}
 bechdel_2013 <- filter(bechdel, year == 2013)
@@ -688,7 +688,7 @@ count(bechdel_2013, binary)
 46/(53+46)
 ```
 
-## Orlando's Analysis
+## Noah's Analysis
 
 ```{r fig.height=5, fig.align="center"}
 plot_beta_binomial(14, 1, y = 46, n = 99)
