@@ -123,7 +123,9 @@ ggplot() +
   labs(title="Beta(0.1,460) Prior") + xlim(0,.0005)
 ```
 
-Most of the prior mass is very close to zero (mean $\frac{\alpha}{\beta}=\frac{0.1}{460+0.1}=0.0002$).
+Most of the prior mass is very close to zero  
+
+(mean $\frac{\alpha}{\beta}=\frac{0.1}{460+0.1}=0.0002$).
 
 ## Posterior Distributions
 
@@ -193,8 +195,5 @@ mean(x_ben>x_con)
 -   Take 5 minutes to consider an example involving Bayesian inference that you might use in one of your courses (tomorrow we will design a posterior analysis activity, so you might think about examples that work well for that goal)
 
 -   Split into (new!) groups of 3-4 and share your ideas
-
--   Add your examples to [https://bit.ly/3JOBKxp](https://bit.ly/3JOBKxp)
-
 
 -   Assign a reporter for large group sharing
