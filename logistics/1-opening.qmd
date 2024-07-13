@@ -72,12 +72,12 @@ format:
 
 
 
-<img src="https://stats68-sp21.netlify.app/img/federica-ricci.jpeg"
-        alt="A headshot of a woman with long blonde hair and bangs."
+<img src="Szofia_photo_small.png"
+        alt="A headshot of a woman with long dark hair from the back."
         style="width:165px; margin-top:20px; border: 3px solid whitesmoke; padding: 10px;">
         
 
-[Federica Zoe Ricci](https://federicazoe.github.io/)
+[Szofia Lewis](https://www.linkedin.com/in/szofia-lewis/)
 
 :::
 :::
@@ -113,7 +113,7 @@ A Brief Overview of the Week
 
 ## Bookmark please
 
-[bayes-bats.github.io/bootcamp-material](https://bayes-bats.github.io/bootcamp-material/)
+[bayes-bats.github.io/bootcamp-materials-2024](https://bayes-bats.github.io/bootcamp-materials-2024/)
 
 [github.com/bayes-bats](https://github.com/bayes-bats)
 :::
@@ -123,23 +123,33 @@ A Brief Overview of the Week
 
 ::: {.font75}
 
-A Brief Overview of UCI campus map
+A Brief Overview of Vassar campus map
 
 :::
 
-[Interactive Map](https://map.uci.edu/?id=463#!ct/61979?s/)
+[Interactive Map](https://map.concept3d.com/?id=699#!ct/68306,10352,10104,8439,8434,8427,8432,8433,8435,8436,8437,8438,8440,10538,10356?s/)
+
+
 
 ## Suggested Social Activity
 
-Monday: [University Town Center (UTC)](https://www.shopirvinecompany.com/centers/irvine/university-center)
+Monday: [Arlington and Happy Hour at Hurricane Grill and Wings](https://locations.hurricanewings.com/ll/US/NY/Poughkeepsie/9-Raymond-Avenue)
 
-Tuesday: Hiking in [Crystal Cove State Park](http://www.crystalcovestatepark.org/hiking-2/) / [Bommer Canyon Trail](https://letsgooutside.org/explore/bommer-canyon/) / [UCI Ecological Reserve](https://ecopreserve.ucnrs.org)
+Tuesday: Stroll above the Hudson at [Walkway Over the Hudson](https://walkway.org/) 
 
-Wednesday: Costa Mesa
+Wednesday: Explore [Vassar's Ecological Preserve](https://www.vassar.edu/preserve)
 
-Thursday: Laguna Beach
+Thursday: Late Night 5-7pm at [The Loeb](https://www.vassar.edu/theloeb) 
 
-Friday: Stay out of traffic if you can
+    - Regular exhibitions
+    - Uluso "Against the Dark Night Sky"
+    - Ubuhle Women: Beedwork and the Art of Independence
+
+Friday \& weekend: [Vassar's Powerhouse Theater](https://www.vassar.edu/powerhouse)
+
+    - Friday 6pm "We Are Gathered Together"
+    - Saturday \& Sunday 8pm "Messy White Gays"
+    - Saturday \& Sunday 7pm "The Taming of the Shrew"
 
 Slack channel `#social`
 
@@ -153,19 +163,23 @@ What is ahead after the bootcamp?
 
 - Tier 2 & Tier 3 discussion
 
-- [Tier 2 Application form](https://duke.qualtrics.com/jfe/form/SV_bmvqDdmb5s0e8yq)
+    - [2023 cohort Tier 2 examples](https://www.stat.uci.edu/bayes-bats/materials.html)
+    - 2023 cohort Tier 2 showcase: Thursday 3-4pm on [Zoom](https://vassar.zoom.us/j/98529379296)
+    - [2023 cohort Tier 3 news](https://www.stat.uci.edu/bayes-bats/dissemination.html)
 
-- Tier 2 Application deadline: July 21st
+- [Tier 2 Application form](https://forms.gle/NVdJgQJZy3kV94VY9)
+
+- Tier 2 Application deadline: July 26th
 
 ## Links
 
-[What if I have a medical emergency?](https://shc.uci.edu/sites/default/files/insurance/docs/uci-med-brochure-rev4.pdf)
+[What if I have a medical emergency?](https://offices.vassar.edu/campus-safety/)
 
-[UCI PD](https://www.police.uci.edu/)
 
 ## Photo Day
 
-Thursday afternoon we will have a photographer come in from Communications to take our photo as a group. 
+Thursday afternoon we will have a photographer come in from Communications to take our photo as a group and do some small interviews.
+
 
 ## Social Media
 

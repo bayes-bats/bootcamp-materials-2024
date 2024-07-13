@@ -20,13 +20,13 @@ format:
 
 | Discipline | Discipline |
 |------|------|
-| Aerospace Engineering    |  Logistics   |
-| Biology    | Mathematics   |
-| Biostatistics   | Mathematics Education   |
-| Business Information \& Analytics | Philosophy |
-| Computer Science | Physics |
-| Ecology  | Psychology |
-| Economics | Statistics  |
+| Biology | Mathematics | 
+| Data Science | Physics |
+| Engineering | Political Science |
+| Forensic/Anthro | Psychology |
+| Law | Science and Technology |
+| Linguistics | Sociology and Anthropology |
+| Marine and Environmental Studies | Statistics |
 
 
 ## What Are You Teaching?
@@ -46,7 +46,7 @@ format:
 
 - Check out the [Bayesian Education Research and Practice](https://berap-isba.github.io/) section website of the [International Society for Bayesian Analysis](https://bayesian.org/)
     
-    - We started a quarterly webinar series this year and feel free to watch the recordings of the [two Bayes textbook panels](https://berap-isba.github.io/events.html) so far
+    - We started a quarterly webinar series in 2023 and feel free to watch the recordings of the [two Bayes textbook panels and one panel on teaching Bayes in psychology](https://berap-isba.github.io/events.html) so far
     - Do you want to be a presenter/panelist in the future? If so, please get in touch with us (jihu@vassar.edu; mdogucu@uci.edu)
 
 - Do you have resources/platforms to share?

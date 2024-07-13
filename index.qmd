@@ -127,17 +127,17 @@ The next four topics are based on the open access intro statistics textbook [Ope
 - Overview: This chapter is to help you with Day 5 materials of Bayes BATS bootcamp.
 - Exercises: 1, 13, 17, 19, 23, 27 (solutions are included in Appendix A).
 
-<!-- ## Day 1 - Foundation of Bayesian inference -->
+## Day 1 - Foundation of Bayesian inference
 
-<!-- Your GitHub repository: `day1-foundations-username` -->
+Your GitHub repository: `day1-foundations-username`
 
-<!-- | Type             | Topic                              | Materials                                                                                              | -->
-<!-- |-------------------|-----------------------------------|-------------------| -->
-<!-- | Opening        | Welcome to Bayes BATS!              | [{{< fa desktop >}}](logistics/1-opening.html)                                                                                                          | -->
-<!-- | Lecture - part 1 | Introduction to Bayesian thinking  | [{{< fa desktop >}}](day-1-foundations/1-lec-intro-bayes-thinking/1-lec-intro-bayes-thinking.html)     | -->
-<!-- | Lecture - part 2 | Discrete Response Data             | [{{< fa desktop >}}](day-1-foundations/2-lec-discrete-data/2-lec-discrete-data.html)                   | -->
-<!-- | Discussion       | Challenges of teaching Bayes       | [{{< fa desktop >}}](day-1-foundations/3-dis-challenges-teach-bayes/3-dis-challenges-teach-bayes.html) | -->
-<!-- | Activity         | Designing a Bayes Theorem activity | [{{< fa desktop >}}](day-1-foundations/4-act-bayes-theorem/4-act-bayes-theorem.html)                   | -->
+| Type             | Topic                              | Materials                                                                                              |
+|-------------------|-----------------------------------|-------------------|
+| Opening        | Welcome to Bayes BATS!              | [{{< fa desktop >}}](logistics/1-opening.html)                                                                                                          |
+| Lecture - part 1 | Introduction to Bayesian thinking  | [{{< fa desktop >}}](day-1-foundations/1-lec-intro-bayes-thinking/1-lec-intro-bayes-thinking.html)     |
+| Lecture - part 2 | Discrete Response Data             | [{{< fa desktop >}}](day-1-foundations/2-lec-discrete-data/2-lec-discrete-data.html)                   |
+| Discussion       | Challenges of teaching Bayes       | [{{< fa desktop >}}](day-1-foundations/3-dis-challenges-teach-bayes/3-dis-challenges-teach-bayes.html) |
+| Activity         | Designing a Bayes Theorem activity | [{{< fa desktop >}}](day-1-foundations/4-act-bayes-theorem/4-act-bayes-theorem.html)                   |
 
 <!-- ## Day 2 - Bayesian computing: Simulating the posterior -->
 
