@@ -20,13 +20,13 @@ format:
 
 | Discipline | Discipline |
 |------|------|
-| Biology | Mathematics | 
-| Data Science | Physics |
+| Biology | Physics | 
 | Engineering | Political Science |
 | Forensic/Anthro | Psychology |
 | Law | Science and Technology |
 | Linguistics | Sociology and Anthropology |
 | Marine and Environmental Studies | Statistics |
+| Mathematics |  |
 
 
 ## What Are You Teaching?
