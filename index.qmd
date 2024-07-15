@@ -139,16 +139,16 @@ Your GitHub repository: `day1-foundations-username`
 | Discussion       | Challenges of teaching Bayes       | [{{< fa desktop >}}](day-1-foundations/3-dis-challenges-teach-bayes/3-dis-challenges-teach-bayes.html) |
 | Activity         | Designing a Bayes Theorem activity | [{{< fa desktop >}}](day-1-foundations/4-act-bayes-theorem/4-act-bayes-theorem.html)                   |
 
-<!-- ## Day 2 - Bayesian computing: Simulating the posterior -->
+## Day 2 - Bayesian computing: Simulating the posterior
 
-<!-- Your GitHub repository: `day2-simulations-username` -->
+Your GitHub repository: `day2-simulations-username`
 
-<!-- | Type             | Topic                                 | Materials                                                                                          | -->
-<!-- |-------------------|-----------------------------------|-------------------| -->
-<!-- | Lecture - part 1 | Conjugate Priors and their Posteriors | [{{< fa desktop >}}](day-2-simulations/1-lec-posterior-conjugate/1-lec-posterior-conjugate.html)   | -->
-<!-- | Lecture - part 2 | Gibbs Sampler and MCMC                | [{{< fa desktop >}}](day-2-simulations/2-lec-gibbs-sampler-mcmc/2-lec-gibbs-sampler-mcmc.html)     | -->
-<!-- | Discussion       | Bayes in STEM Fields: Use Cases       | [{{< fa desktop >}}](day-2-simulations/3-dis-cases-bayes-stem/3-dis-cases-bayes-stem.html)         | -->
-<!-- | Activity         | Designing a simulation activity       | [{{< fa desktop >}}](day-2-simulations/4-act-design-simu-activity/4-act-design-simu-activity.html) | -->
+| Type             | Topic                                 | Materials                                                                                          |
+|-------------------|-----------------------------------|-------------------|
+| Lecture - part 1 | Conjugate Priors and their Posteriors | [{{< fa desktop >}}](day-2-simulations/1-lec-posterior-conjugate/1-lec-posterior-conjugate.html)   |
+| Lecture - part 2 | Gibbs Sampler and MCMC                | [{{< fa desktop >}}](day-2-simulations/2-lec-gibbs-sampler-mcmc/2-lec-gibbs-sampler-mcmc.html)     |
+| Discussion       | Bayes in STEM Fields: Use Cases       | [{{< fa desktop >}}](day-2-simulations/3-dis-cases-bayes-stem/3-dis-cases-bayes-stem.html)         |
+| Activity         | Designing a simulation activity       | [{{< fa desktop >}}](day-2-simulations/4-act-design-simu-activity/4-act-design-simu-activity.html) |
 
 <!-- ## Day 3 - Bayesian computing: Posterior analysis -->
 
