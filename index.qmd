@@ -150,17 +150,17 @@ Your GitHub repository: `day2-simulations-username`
 | Discussion       | Bayes in STEM Fields: Use Cases       | [{{< fa desktop >}}](day-2-simulations/3-dis-cases-bayes-stem/3-dis-cases-bayes-stem.html)         |
 | Activity         | Designing a simulation activity       | [{{< fa desktop >}}](day-2-simulations/4-act-design-simu-activity/4-act-design-simu-activity.html) |
 
-<!-- ## Day 3 - Bayesian computing: Posterior analysis -->
+## Day 3 - Bayesian computing: Posterior analysis
 
-<!-- Your GitHub repository: `day3-posterior-username` -->
+Your GitHub repository: `day3-posterior-username`
 
-<!-- | Type             | Topic                                   | Materials                                                                                                    | -->
-<!-- |-------------------|-----------------------------------|-------------------| -->
-<!-- | Lecture - part 1 | Posterior Inference and MCMC Algorithms | [{{< fa desktop >}}](day-3-posterior/1-lec-posterior-MCMC-algorithms/1-lec-posterior-MCMC-algorithms.html)   | -->
-<!-- | Lecture - part 2 | Posterior Analysis with MCMC            | [{{< fa desktop >}}](day-3-posterior/2-lec-posterior-analysis/2-lec-posterior-analysis.html)                 | -->
-<!-- | Lecture - part 2 | Posterior Analysis with MCMC and `rstanarm` version            | [{{< fa desktop >}}](day-3-posterior/2-lec-posterior-analysis/2-lec-posterior-analysis-rstanarm.html)                 | -->
-<!-- | Discussion       | Effective Assessment for Bayes Learning | [{{< fa desktop >}}](day-3-posterior/3-dis-effective-assessment-bayes/3-dis-effective-assessment-bayes.html) | -->
-<!-- | Activity         | Designing a posterior analysis activity | [{{< fa desktop >}}](day-3-posterior/4-act-posterior-analysis/4-act-posterior-analysis.html)                 | -->
+| Type             | Topic                                   | Materials                                                                                                    |
+|-------------------|-----------------------------------|-------------------|
+| Lecture - part 1 | Posterior Inference and MCMC Algorithms | [{{< fa desktop >}}](day-3-posterior/1-lec-posterior-MCMC-algorithms/1-lec-posterior-MCMC-algorithms.html)   |
+| Lecture - part 2 | Posterior Analysis with MCMC            | [{{< fa desktop >}}](day-3-posterior/2-lec-posterior-analysis/2-lec-posterior-analysis.html)                 |
+| Lecture - part 2 | Posterior Analysis with MCMC and `rstanarm` version            | [{{< fa desktop >}}](day-3-posterior/2-lec-posterior-analysis/2-lec-posterior-analysis-rstanarm.html)                 |
+| Discussion       | Effective Assessment for Bayes Learning | [{{< fa desktop >}}](day-3-posterior/3-dis-effective-assessment-bayes/3-dis-effective-assessment-bayes.html) |
+| Activity         | Designing a posterior analysis activity | [{{< fa desktop >}}](day-3-posterior/4-act-posterior-analysis/4-act-posterior-analysis.html)                 |
 
 <!-- ## Day 4 - Bayesian modeling: Regression models -->
 

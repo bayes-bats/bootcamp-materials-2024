@@ -56,7 +56,7 @@ knitr::include_graphics("TAStable.png")
     - Include a data analysis portion in a homework assignment and in an exam
     - Include a course project component in course assessments
     - Include formative assessments such as quizzes (low to no-grade contribution) to get students to do drill and practice exercises
-    - Be created with assessment tools
+    - Be creative with assessment tools
     - In addition to lectures, use real data in every assessment when possible
 
 ## Discussion Questions
