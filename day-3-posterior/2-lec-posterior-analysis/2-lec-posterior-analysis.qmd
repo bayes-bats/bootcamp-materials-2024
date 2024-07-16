@@ -248,7 +248,7 @@ Try changing just one aspect of the prior at a time to evaluate robustness.
 
 ## Changes in Reaction Time with Sleep Deprivation
 
-Now that we've explored baseline reaction time, let's see what happens to the reaction times of study participants after one night of sleep deprivation (only 3 hours of time in bed).  First, we will do a little data wrangling and make a plot of the changse in reaction time, plotting the sleep deprived reaction time minus the baseline reaction time for each subject.
+Now that we've explored baseline reaction time, let's see what happens to the reaction times of study participants after one night of sleep deprivation (only 3 hours of time in bed).  First, we will do a little data wrangling and make a plot of the changes in reaction time, plotting the sleep deprived reaction time minus the baseline reaction time for each subject.
 
 ## Changes in Reaction Time 
 

@@ -526,11 +526,11 @@ Formula: Reaction ~ 1
 
 Regression Coefficients:
           Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-Intercept   266.36      7.51   251.91   281.62 1.00     2791     2347
+Intercept   266.40      7.46   251.83   280.94 1.00     2463     1886
 
 Further Distributional Parameters:
       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-sigma    31.06      5.50    22.46    43.17 1.00     2423     2115
+sigma    31.15      5.66    22.44    44.75 1.00     2330     2092
 
 Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
 and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -564,14 +564,14 @@ scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
 <span id="cb6-2"><a href=""></a><span class="in">mean(as_draws_df(fit)$b_Intercept&lt;275)</span></span>
 <span id="cb6-3"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.87675</code></pre>
+<pre><code>[1] 0.88125</code></pre>
 </div>
 </div>
-<p>So the posterior probability that <span class="math inline">\(\mu&lt;275\)</span> is 0.87675.</p>
+<p>So the posterior probability that <span class="math inline">\(\mu&lt;275\)</span> is 0.88125.</p>
 </section>
 <section id="evaluating-our-hypothesis-2" class="slide level2">
 <h2>Evaluating Our Hypothesis</h2>
-<p>We can also use the 95% credible interval for <span class="math inline">\(\mu\)</span>, given by (251.91,281.62) and note that 275 is inside this credible interval.</p>
+<p>We can also use the 95% credible interval for <span class="math inline">\(\mu\)</span>, given by (251.83,280.94) and note that 275 is inside this credible interval.</p>
 </section>
 <section id="you-try-it" class="slide level2">
 <h2>You Try It!</h2>
@@ -581,7 +581,7 @@ scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
 </section>
 <section id="changes-in-reaction-time-with-sleep-deprivation" class="slide level2">
 <h2>Changes in Reaction Time with Sleep Deprivation</h2>
-<p>Now that we’ve explored baseline reaction time, let’s see what happens to the reaction times of study participants after one night of sleep deprivation (only 3 hours of time in bed). First, we will do a little data wrangling and make a plot of the changse in reaction time, plotting the sleep deprived reaction time minus the baseline reaction time for each subject.</p>
+<p>Now that we’ve explored baseline reaction time, let’s see what happens to the reaction times of study participants after one night of sleep deprivation (only 3 hours of time in bed). First, we will do a little data wrangling and make a plot of the changes in reaction time, plotting the sleep deprived reaction time minus the baseline reaction time for each subject.</p>
 </section>
 <section id="changes-in-reaction-time" class="slide level2">
 <h2>Changes in Reaction Time</h2>
