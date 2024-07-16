@@ -71,6 +71,8 @@ Recall the beta-binomial model: let $\pi \sim \text{Beta}(\alpha, \beta)$ and $Y
 
 We can think of a beta-binomial model for each group, the control group and the benzophenone group.
 
+Note: if you've done a lot of modeling, you might think first of a logistic regression model -- a good choice here, but we haven't yet discussed regression modeling, so we'll stick with analyzing each group using a beta-binomial model.
+
 ## Benzophenone Group
 
 Given that we don't know much about this chemical, we may want to specify a uniform prior, such as a Beta(1,1).
@@ -187,6 +189,7 @@ We can evaluate the hypothesis that the posterior mean tumor rate in the benzoph
 #| eval: true
 x_con=rbeta(10000000,0.1,510)
 x_ben=rbeta(10000000,4,148)
+head(data.frame(x_con,x_ben))
 mean(x_ben>x_con)
 ```
 

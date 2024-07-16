@@ -466,6 +466,7 @@ odds ratio
 <p>Bayesian methods give us a great mechanism for incorporating historical data into an analysis!</p>
 <p>Recall the beta-binomial model: let <span class="math inline">\(\pi \sim \text{Beta}(\alpha, \beta)\)</span> and <span class="math inline">\(Y|n \sim \text{Bin}(n,\pi)\)</span>. Then <span class="math inline">\(\pi|y \sim \text{Beta}(\alpha +y, \beta+n-y)\)</span>, and <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> can be interpreted as the prior number of successes (here, tumors) and failures, respectively.</p>
 <p>We can think of a beta-binomial model for each group, the control group and the benzophenone group.</p>
+<p>Note: if you’ve done a lot of modeling, you might think first of a logistic regression model – a good choice here, but we haven’t yet discussed regression modeling, so we’ll stick with analyzing each group using a beta-binomial model.</p>
 </section>
 <section id="benzophenone-group" class="slide level2">
 <h2>Benzophenone Group</h2>
@@ -532,9 +533,19 @@ odds ratio
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a>x_con<span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000000</span>,<span class="fl">0.1</span>,<span class="dv">510</span>)</span>
 <span id="cb5-2"><a href=""></a>x_ben<span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000000</span>,<span class="dv">4</span>,<span class="dv">148</span>)</span>
-<span id="cb5-3"><a href=""></a><span class="fu">mean</span>(x_ben<span class="sc">&gt;</span>x_con)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-3"><a href=""></a><span class="fu">head</span>(<span class="fu">data.frame</span>(x_con,x_ben))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.9999001</code></pre>
+<pre><code>                  x_con      x_ben
+1 0.0000004909612032774 0.02494494
+2 0.0001626490103104911 0.01090866
+3 0.0010317684290903455 0.01839283
+4 0.0017686088612950891 0.03571226
+5 0.0000000000009182275 0.03246500
+6 0.0004263432651082928 0.01323914</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">mean</span>(x_ben<span class="sc">&gt;</span>x_con)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9999043</code></pre>
 </div>
 </div>
 </section>
