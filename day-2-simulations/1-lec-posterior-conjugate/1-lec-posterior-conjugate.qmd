@@ -115,12 +115,12 @@ historical+last10+agnostic
 
 ## Aside: More Informative Prior
 
-For the more informative prior, using 121 years of historical data, the prior and posterior are not exactly the same but are very close. We can focus in more closely to see the slight difference.
+For the more informative prior, using 120 years of historical data, the prior and posterior are not exactly the same but are very close. We can focus in more closely to see the slight difference.
 
 ```{r, echo=TRUE, eval=TRUE}
-plot_beta_binomial(59, 62, y = 1, n = 1) +
-  labs(title = "Prior Using 1900-2020",y=NULL) + 
-  xlim(0.3,0.675)
+plot_beta_binomial(58, 62, y = 1, n = 1) +
+  labs(title = "Prior Using 1900-2019",y=NULL) + 
+  xlim(0.3,0.675) #zoom in x axis
 ```
 
 ## Aside: Posterior Proportional to Likelihood
@@ -329,21 +329,21 @@ g
 
 ## Normal Likelihood
 
-$$L(\mu |\vec{y})= \prod_{i=1}^{n}L(\mu | y_i) = \prod_{i=1}^{n}\frac{1}{\sqrt{2\pi\sigma^2}} \exp\bigg[{-\frac{(y_i-\mu)^2}{2\sigma^2}}\bigg].$$
+$$L(\mu |\overrightarrow{y})= \prod_{i=1}^{n}L(\mu | y_i) = \prod_{i=1}^{n}\frac{1}{\sqrt{2\pi\sigma^2}} \exp\bigg[{-\frac{(y_i-\mu)^2}{2\sigma^2}}\bigg].$$
 
 Simplifying this up to a _proportionality_ constant
 
-$$L(\mu |\vec{y}) \propto \prod_{i=1}^{n} \exp\bigg[{-\frac{(y_i-\mu)^2}{2\sigma^2}}\bigg] =  \exp\bigg[{-\frac{\sum_{i=1}^n (y_i-\mu)^2}{2\sigma^2}}\bigg] \; .$$
+$$L(\mu |\overrightarrow{y}) \propto \prod_{i=1}^{n} \exp\bigg[{-\frac{(y_i-\mu)^2}{2\sigma^2}}\bigg] =  \exp\bigg[{-\frac{\sum_{i=1}^n (y_i-\mu)^2}{2\sigma^2}}\bigg] \; .$$
 
 . . . 
 
 \begin{equation}
-L(\mu | \vec{y}) \propto \exp\bigg[{-\frac{(\bar{y}-\mu)^2}{2\sigma^2/n}}\bigg] \;\;\;\; \text{ for } \; \mu \in (-\infty, \infty).
+L(\mu | \overrightarrow{y}) \propto \exp\bigg[{-\frac{(\bar{y}-\mu)^2}{2\sigma^2/n}}\bigg] \;\;\;\; \text{ for } \; \mu \in (-\infty, \infty).
 \end{equation}
 
 ## 
 
-$$L(\mu | \vec{y}) \propto \exp\bigg[{-\frac{(5.735-\mu)^2}{2(0.593^2/25)}}\bigg] \;\;\;\; \text{ for } \; \mu \in (-\infty, \infty),$$ 
+$$L(\mu | \overrightarrow{y}) \propto \exp\bigg[{-\frac{(5.735-\mu)^2}{2(0.593^2/25)}}\bigg] \;\;\;\; \text{ for } \; \mu \in (-\infty, \infty),$$ 
 
 
 ```{r likelihood-hippocampus-ch5, fig.cap='The joint Normal likelihood function for the mean hippocampal volume.', echo = FALSE}
@@ -395,7 +395,7 @@ Y_i | \mu & \stackrel{ind}{\sim} N(\mu, \sigma^2) \\
 \mu & \sim N(\theta, \tau^2) \\
 \end{split}$$
 
-Upon observing data $\vec{y} = (y_1,y_2,\ldots,y_n)$, the posterior model of $\mu$ is $N(\mu_n,\tau^2_n)$.
+Upon observing data $\overrightarrow{y} = (y_1,y_2,\ldots,y_n)$, the posterior model of $\mu$ is $N(\mu_n,\tau^2_n)$.
 
 ## Normal Posterior
 
@@ -421,11 +421,11 @@ For the hippocampus data, we selected the prior $\mu \sim N(6.5, 0.5^2)$, and re
 
 The posterior model of $\mu$ is:
 
-$$\mu | \vec{y} \; \sim \; N\bigg(\frac{6.5*\frac{1}{0.5^2} + 5.735*\frac{25}{0.593^2}}{\frac{1}{0.5^2}+\frac{25}{0.593^2}}, \; \frac{1}{\frac{1}{0.5^2}+\frac{25}{0.593^2}}\bigg)\;,$$
+$$\mu | \overrightarrow{y} \; \sim \; N\bigg(\frac{6.5*\frac{1}{0.5^2} + 5.735*\frac{25}{0.593^2}}{\frac{1}{0.5^2}+\frac{25}{0.593^2}}, \; \frac{1}{\frac{1}{0.5^2}+\frac{25}{0.593^2}}\bigg)\;,$$
 
 or, further simplified,
 
-$$\mu | \vec{y} \; \sim \; N\bigg(5.776, 0.115^2 \bigg) \; .$$
+$$\mu | \overrightarrow{y} \; \sim \; N\bigg(5.776, 0.115^2 \bigg) \; .$$
 
 ## 
 

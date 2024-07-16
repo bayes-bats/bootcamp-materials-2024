@@ -549,11 +549,11 @@
 </section>
 <section id="aside-more-informative-prior" class="slide level2">
 <h2>Aside: More Informative Prior</h2>
-<p>For the more informative prior, using 121 years of historical data, the prior and posterior are not exactly the same but are very close. We can focus in more closely to see the slight difference.</p>
+<p>For the more informative prior, using 120 years of historical data, the prior and posterior are not exactly the same but are very close. We can focus in more closely to see the slight difference.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">plot_beta_binomial</span>(<span class="dv">59</span>, <span class="dv">62</span>, <span class="at">y =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb3-2"><a href=""></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Prior Using 1900-2020"</span>,<span class="at">y=</span><span class="cn">NULL</span>) <span class="sc">+</span> </span>
-<span id="cb3-3"><a href=""></a>  <span class="fu">xlim</span>(<span class="fl">0.3</span>,<span class="fl">0.675</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">plot_beta_binomial</span>(<span class="dv">58</span>, <span class="dv">62</span>, <span class="at">y =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb3-2"><a href=""></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Prior Using 1900-2019"</span>,<span class="at">y=</span><span class="cn">NULL</span>) <span class="sc">+</span> </span>
+<span id="cb3-3"><a href=""></a>  <span class="fu">xlim</span>(<span class="fl">0.3</span>,<span class="fl">0.675</span>) <span class="co">#zoom in x axis</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="1-lec-posterior-conjugate_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
@@ -784,18 +784,18 @@ E(Y) &amp; = \text{ Mode}(Y) = \mu \\
 <img data-src="1-lec-posterior-conjugate_files/figure-revealjs/normal-tuning-1.png" width="1152" class="r-stretch"></section>
 <section id="normal-likelihood" class="slide level2">
 <h2>Normal Likelihood</h2>
-<p><span class="math display">\[L(\mu |\vec{y})= \prod_{i=1}^{n}L(\mu | y_i) = \prod_{i=1}^{n}\frac{1}{\sqrt{2\pi\sigma^2}} \exp\bigg[{-\frac{(y_i-\mu)^2}{2\sigma^2}}\bigg].\]</span></p>
+<p><span class="math display">\[L(\mu |\overrightarrow{y})= \prod_{i=1}^{n}L(\mu | y_i) = \prod_{i=1}^{n}\frac{1}{\sqrt{2\pi\sigma^2}} \exp\bigg[{-\frac{(y_i-\mu)^2}{2\sigma^2}}\bigg].\]</span></p>
 <p>Simplifying this up to a <em>proportionality</em> constant</p>
-<p><span class="math display">\[L(\mu |\vec{y}) \propto \prod_{i=1}^{n} \exp\bigg[{-\frac{(y_i-\mu)^2}{2\sigma^2}}\bigg] =  \exp\bigg[{-\frac{\sum_{i=1}^n (y_i-\mu)^2}{2\sigma^2}}\bigg] \; .\]</span></p>
+<p><span class="math display">\[L(\mu |\overrightarrow{y}) \propto \prod_{i=1}^{n} \exp\bigg[{-\frac{(y_i-\mu)^2}{2\sigma^2}}\bigg] =  \exp\bigg[{-\frac{\sum_{i=1}^n (y_i-\mu)^2}{2\sigma^2}}\bigg] \; .\]</span></p>
 <div class="fragment">
 <p><span class="math display">\[\begin{equation}
-L(\mu | \vec{y}) \propto \exp\bigg[{-\frac{(\bar{y}-\mu)^2}{2\sigma^2/n}}\bigg] \;\;\;\; \text{ for } \; \mu \in (-\infty, \infty).
+L(\mu | \overrightarrow{y}) \propto \exp\bigg[{-\frac{(\bar{y}-\mu)^2}{2\sigma^2/n}}\bigg] \;\;\;\; \text{ for } \; \mu \in (-\infty, \infty).
 \end{equation}\]</span></p>
 </div>
 </section>
 <section id="section-6" class="slide level2">
 <h2></h2>
-<p><span class="math display">\[L(\mu | \vec{y}) \propto \exp\bigg[{-\frac{(5.735-\mu)^2}{2(0.593^2/25)}}\bigg] \;\;\;\; \text{ for } \; \mu \in (-\infty, \infty),\]</span></p>
+<p><span class="math display">\[L(\mu | \overrightarrow{y}) \propto \exp\bigg[{-\frac{(5.735-\mu)^2}{2(0.593^2/25)}}\bigg] \;\;\;\; \text{ for } \; \mu \in (-\infty, \infty),\]</span></p>
 
 <img data-src="1-lec-posterior-conjugate_files/figure-revealjs/likelihood-hippocampus-ch5-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">The joint Normal likelihood function for the mean hippocampal volume.</p></section>
 <section id="normal-prior-for-the-mean" class="slide level2">
@@ -820,7 +820,7 @@ f(\mu) = \frac{1}{\sqrt{2\pi\tau^2}} \exp\bigg[{-\frac{(\mu - \theta)^2}{2\tau^2
 Y_i | \mu &amp; \stackrel{ind}{\sim} N(\mu, \sigma^2) \\
 \mu &amp; \sim N(\theta, \tau^2) \\
 \end{split}\]</span></p>
-<p>Upon observing data <span class="math inline">\(\vec{y} = (y_1,y_2,\ldots,y_n)\)</span>, the posterior model of <span class="math inline">\(\mu\)</span> is <span class="math inline">\(N(\mu_n,\tau^2_n)\)</span>.</p>
+<p>Upon observing data <span class="math inline">\(\overrightarrow{y} = (y_1,y_2,\ldots,y_n)\)</span>, the posterior model of <span class="math inline">\(\mu\)</span> is <span class="math inline">\(N(\mu_n,\tau^2_n)\)</span>.</p>
 </section>
 <section id="normal-posterior" class="slide level2">
 <h2>Normal Posterior</h2>
@@ -838,9 +838,9 @@ Y_i | \mu &amp; \stackrel{ind}{\sim} N(\mu, \sigma^2) \\
 <h2>Back to Brains</h2>
 <p>For the hippocampus data, we selected the prior <span class="math inline">\(\mu \sim N(6.5, 0.5^2)\)</span>, and recall in our dataset the mean was 5.735 and sd was 0.593.</p>
 <p>The posterior model of <span class="math inline">\(\mu\)</span> is:</p>
-<p><span class="math display">\[\mu | \vec{y} \; \sim \; N\bigg(\frac{6.5*\frac{1}{0.5^2} + 5.735*\frac{25}{0.593^2}}{\frac{1}{0.5^2}+\frac{25}{0.593^2}}, \; \frac{1}{\frac{1}{0.5^2}+\frac{25}{0.593^2}}\bigg)\;,\]</span></p>
+<p><span class="math display">\[\mu | \overrightarrow{y} \; \sim \; N\bigg(\frac{6.5*\frac{1}{0.5^2} + 5.735*\frac{25}{0.593^2}}{\frac{1}{0.5^2}+\frac{25}{0.593^2}}, \; \frac{1}{\frac{1}{0.5^2}+\frac{25}{0.593^2}}\bigg)\;,\]</span></p>
 <p>or, further simplified,</p>
-<p><span class="math display">\[\mu | \vec{y} \; \sim \; N\bigg(5.776, 0.115^2 \bigg) \; .\]</span></p>
+<p><span class="math display">\[\mu | \overrightarrow{y} \; \sim \; N\bigg(5.776, 0.115^2 \bigg) \; .\]</span></p>
 </section>
 <section id="section-7" class="slide level2">
 <h2></h2>
