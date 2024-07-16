@@ -179,7 +179,7 @@ historical+last10+agnostic2
 
 :::
 
-## Aside: Posterior Proportional to Likelihood
+## Aside: Prior Proportional to Likelihood
 
 ```{r }
 agnostic2
