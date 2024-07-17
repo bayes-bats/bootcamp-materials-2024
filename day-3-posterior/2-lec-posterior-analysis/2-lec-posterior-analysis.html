@@ -526,11 +526,11 @@ Formula: Reaction ~ 1
 
 Regression Coefficients:
           Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-Intercept   266.40      7.46   251.83   280.94 1.00     2463     1886
+Intercept   265.97      7.48   251.03   280.78 1.00     1856     2305
 
 Further Distributional Parameters:
       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-sigma    31.15      5.66    22.44    44.75 1.00     2330     2092
+sigma    31.12      5.67    22.24    44.61 1.00     2442     2243
 
 Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
 and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -564,14 +564,14 @@ scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
 <span id="cb6-2"><a href=""></a><span class="in">mean(as_draws_df(fit)$b_Intercept&lt;275)</span></span>
 <span id="cb6-3"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.88125</code></pre>
+<pre><code>[1] 0.89525</code></pre>
 </div>
 </div>
-<p>So the posterior probability that <span class="math inline">\(\mu&lt;275\)</span> is 0.88125.</p>
+<p>So the posterior probability that <span class="math inline">\(\mu&lt;275\)</span> is 0.89525.</p>
 </section>
 <section id="evaluating-our-hypothesis-2" class="slide level2">
 <h2>Evaluating Our Hypothesis</h2>
-<p>We can also use the 95% credible interval for <span class="math inline">\(\mu\)</span>, given by (251.83,280.94) and note that 275 is inside this credible interval.</p>
+<p>We can also use the 95% credible interval for <span class="math inline">\(\mu\)</span>, given by (251.03,280.78) and note that 275 is inside this credible interval.</p>
 </section>
 <section id="you-try-it" class="slide level2">
 <h2>You Try It!</h2>
@@ -583,33 +583,73 @@ scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
 <h2>Changes in Reaction Time with Sleep Deprivation</h2>
 <p>Now that we’ve explored baseline reaction time, let’s see what happens to the reaction times of study participants after one night of sleep deprivation (only 3 hours of time in bed). First, we will do a little data wrangling and make a plot of the changes in reaction time, plotting the sleep deprived reaction time minus the baseline reaction time for each subject.</p>
 </section>
+<section id="current-data-format" class="slide level2">
+<h2>Current Data Format</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="fu">head</span>(sleepstudy,<span class="at">n=</span><span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Reaction Days Subject
+1  249.5600    0     308
+2  258.7047    1     308
+3  250.8006    2     308
+4  321.4398    3     308
+5  356.8519    4     308
+6  414.6901    5     308
+7  382.2038    6     308
+8  290.1486    7     308
+9  430.5853    8     308
+10 466.3535    9     308
+11 222.7339    0     309
+12 205.2658    1     309
+13 202.9778    2     309
+14 204.7070    3     309
+15 207.7161    4     309</code></pre>
+</div>
+</div>
+<p>The current data are arranged with one line per measured reaction time. To simplify calculating the change in reaction time, we will extract the two time points of interest and transform the data format to be one line per study participant rather than multiple lines per study participant.</p>
+</section>
 <section id="changes-in-reaction-time" class="slide level2">
 <h2>Changes in Reaction Time</h2>
 <div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Code</a></li><li><a href="#tabset-3-2">Plot</a></li></ul>
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Code</a></li><li><a href="#tabset-3-2">Data Structure</a></li><li><a href="#tabset-3-3">Plot</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="|1-2|3-4|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>sleepdep <span class="ot">&lt;-</span> sleepstudy <span class="sc">%&gt;%</span></span>
-<span id="cb8-2"><a href=""></a>  <span class="fu">filter</span>(Days <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb8-3"><a href=""></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Days, <span class="at">names_prefix=</span><span class="st">"Day"</span>, </span>
-<span id="cb8-4"><a href=""></a>              <span class="at">values_from =</span> Reaction, <span class="at">id_cols=</span>Subject) <span class="sc">%&gt;%</span></span>
-<span id="cb8-5"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">diff32=</span>Day3<span class="sc">-</span>Day2)</span>
-<span id="cb8-6"><a href=""></a>  <span class="co"># consider day 2 baseline and day 3, the first value from a sleep-deprived state, and calculate difference</span></span>
-<span id="cb8-7"><a href=""></a>  <span class="co"># positive differences indicate longer reaction times when sleep-deprived</span></span>
-<span id="cb8-8"><a href=""></a>sleepdep <span class="sc">%&gt;%</span></span>
-<span id="cb8-9"><a href=""></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>diff32)) <span class="sc">+</span></span>
-<span id="cb8-10"><a href=""></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span> </span>
-<span id="cb8-11"><a href=""></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Difference in Reaction Time (ms) when Sleep Deprived"</span>) <span class="sc">+</span> </span>
-<span id="cb8-12"><a href=""></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept=</span><span class="dv">0</span>, <span class="at">col=</span><span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="|1-2|3-4|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a>sleepdep <span class="ot">&lt;-</span> sleepstudy <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href=""></a>  <span class="fu">filter</span>(Days <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb10-3"><a href=""></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Days, <span class="at">names_prefix=</span><span class="st">"Day"</span>, </span>
+<span id="cb10-4"><a href=""></a>              <span class="at">values_from =</span> Reaction, <span class="at">id_cols=</span>Subject) <span class="sc">%&gt;%</span></span>
+<span id="cb10-5"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">diff32=</span>Day3<span class="sc">-</span>Day2)</span>
+<span id="cb10-6"><a href=""></a>  <span class="co"># consider day 2 baseline and day 3, the first value from a sleep-deprived state, and calculate difference</span></span>
+<span id="cb10-7"><a href=""></a>  <span class="co"># positive differences indicate longer reaction times when sleep-deprived</span></span>
+<span id="cb10-8"><a href=""></a>sleepdep <span class="sc">%&gt;%</span></span>
+<span id="cb10-9"><a href=""></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>diff32)) <span class="sc">+</span></span>
+<span id="cb10-10"><a href=""></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span> </span>
+<span id="cb10-11"><a href=""></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Difference in Reaction Time (ms) when Sleep Deprived"</span>) <span class="sc">+</span> </span>
+<span id="cb10-12"><a href=""></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept=</span><span class="dv">0</span>, <span class="at">col=</span><span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-3-2">
 <div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  Subject  Day2  Day3 diff32
+  &lt;fct&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+1 308      251.  321.  70.6 
+2 309      203.  205.   1.73
+3 310      234.  233.  -1.48
+4 330      284.  285.   1.28
+5 331      302.  320.  18.3 
+6 332      273.  310.  36.8 </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-3-3">
+<div class="cell">
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="2-lec-posterior-analysis_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+<p><img data-src="2-lec-posterior-analysis_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
 </figure>
 </div>
 </div>
