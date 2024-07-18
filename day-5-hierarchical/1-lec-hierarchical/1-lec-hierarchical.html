@@ -410,10 +410,10 @@
 <h2>Recap: The Normal Model &amp; Normal Regression</h2>
 <ul>
 <li class="fragment"><p>When you have continuous outcomes, you can use a normal model: <span class="math display">\[\begin{equation*}
-Y_i \mid \mu, \sigma \overset{i.i.d.}{\sim} \textrm{Normal}(\mu, \sigma), \,\,\, i = 1, \cdots, n.
+Y_i \mid \mu, \sigma \overset{i.i.d.}{\sim} \textrm{Normal}(\mu, \sigma^2), \,\,\, i = 1, \cdots, n.
 \end{equation*}\]</span></p></li>
 <li class="fragment"><p>When you have predictor variables available, <span class="math inline">\(\{x_{i1}, \cdots, x_{ip}\}\)</span>; you can specify an observation specific mean: <span class="math display">\[\begin{equation*}
-Y_i \mid \mu_i, \sigma \overset{ind}{\sim} \textrm{Normal}(\mu_i, \sigma), \,\,\, i = 1, \cdots, n, \text{ where}
+Y_i \mid \mu_i, \sigma \overset{ind}{\sim} \textrm{Normal}(\mu_i, \sigma^2), \,\,\, i = 1, \cdots, n, \text{ where}
 \end{equation*}\]</span> <span class="math display">\[\begin{equation*}
 \mu_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \cdots, \beta_p x_{ip}.
 \end{equation*}\]</span></p></li>
@@ -570,13 +570,13 @@ Y_i \mid \mu_i, \sigma \overset{ind}{\sim} \textrm{Normal}(\mu_i, \sigma), \,\,\
 <h2>Modeling Challenges</h2>
 <ul>
 <li class="fragment">Approach 1 - separate estimates for each movie <span class="math inline">\(j\)</span>: <span class="math display">\[\begin{equation*}
-Y_{1j}, \cdots, Y_{n_j j} \overset{i.i.d.}{\sim} \textrm{Normal}(\mu_j, \sigma_j)
+Y_{1j}, \cdots, Y_{n_j j} \overset{i.i.d.}{\sim} \textrm{Normal}(\mu_j, \sigma_j^2)
 \end{equation*}\]</span>
 <ul>
 <li class="fragment">No relation among groups: groups with small sample size might suffer (e.g., <span class="math inline">\(n_j = 1\)</span>)</li>
 </ul></li>
 <li class="fragment">Approach 2 - combined estimates for all <span class="math inline">\(J\)</span> movies: <span class="math display">\[\begin{equation*}
-Y_{ij} \overset{i.i.d.}{\sim} \textrm{Normal}(\mu, \sigma)
+Y_{ij} \overset{i.i.d.}{\sim} \textrm{Normal}(\mu, \sigma^2)
 \end{equation*}\]</span>
 <ul>
 <li class="fragment">Differences in groups are ignored</li>
@@ -603,7 +603,7 @@ Y_{ij} \overset{i.i.d.}{\sim} \textrm{Normal}(\mu, \sigma)
 <div>
 <ul>
 <li><p>Without loss of generality, assume a group-specific normal model for movie <span class="math inline">\(j\)</span>: <span class="math display">\[\begin{eqnarray}
-Y_{ij} \overset{i.i.d.}{\sim} \textrm{Normal}(\mu_j, \sigma)
+Y_{ij} \overset{i.i.d.}{\sim} \textrm{Normal}(\mu_j, \sigma^2)
 \end{eqnarray}\]</span> where <span class="math inline">\(i = 1, \cdots, n_j\)</span> and <span class="math inline">\(n_j\)</span> is the number of observations in group <span class="math inline">\(j\)</span></p></li>
 <li><p>Model parameters: <span class="math inline">\(\{\mu_1, \cdots, \mu_J, \sigma\}\)</span></p></li>
 </ul>
@@ -624,7 +624,7 @@ Y_{ij} \overset{i.i.d.}{\sim} \textrm{Normal}(\mu_j, \sigma)
 <ul>
 <li class="fragment"><p>All movies are animation movies, we could assume that the mean ratings are similar across movies</p></li>
 <li class="fragment"><p>First stage: the same normal prior distribution for each mean <span class="math inline">\(\mu_j\)</span> <span class="math display">\[\begin{equation}
-\mu_j \mid \mu, \tau \sim \textrm{Normal}(\mu, \tau)
+\mu_j \mid \mu, \tau \sim \textrm{Normal}(\mu, \tau^2)
 \end{equation}\]</span></p></li>
 <li class="fragment"><p>This prior allows information pooled across movies (groups)</p>
 <ul>
@@ -708,8 +708,8 @@ Y_{ij} \overset{i.i.d.}{\sim} \textrm{Normal}(\mu_j, \sigma)
 <pre><code>
 SAMPLING FOR MODEL 'anon_model' NOW (CHAIN 1).
 Chain 1: 
-Chain 1: Gradient evaluation took 3.7e-05 seconds
-Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.37 seconds.
+Chain 1: Gradient evaluation took 4.7e-05 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.47 seconds.
 Chain 1: Adjust your expectations accordingly!
 Chain 1: 
 Chain 1: 
@@ -726,15 +726,15 @@ Chain 1: Iteration: 16000 / 20000 [ 80%]  (Sampling)
 Chain 1: Iteration: 18000 / 20000 [ 90%]  (Sampling)
 Chain 1: Iteration: 20000 / 20000 [100%]  (Sampling)
 Chain 1: 
-Chain 1:  Elapsed Time: 0.391 seconds (Warm-up)
-Chain 1:                0.426 seconds (Sampling)
-Chain 1:                0.817 seconds (Total)
+Chain 1:  Elapsed Time: 0.397 seconds (Warm-up)
+Chain 1:                0.432 seconds (Sampling)
+Chain 1:                0.829 seconds (Total)
 Chain 1: 
 
 SAMPLING FOR MODEL 'anon_model' NOW (CHAIN 2).
 Chain 2: 
-Chain 2: Gradient evaluation took 1.1e-05 seconds
-Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.11 seconds.
+Chain 2: Gradient evaluation took 6e-06 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.06 seconds.
 Chain 2: Adjust your expectations accordingly!
 Chain 2: 
 Chain 2: 
@@ -751,10 +751,23 @@ Chain 2: Iteration: 16000 / 20000 [ 80%]  (Sampling)
 Chain 2: Iteration: 18000 / 20000 [ 90%]  (Sampling)
 Chain 2: Iteration: 20000 / 20000 [100%]  (Sampling)
 Chain 2: 
-Chain 2:  Elapsed Time: 0.408 seconds (Warm-up)
-Chain 2:                0.417 seconds (Sampling)
-Chain 2:                0.825 seconds (Total)
+Chain 2:  Elapsed Time: 0.401 seconds (Warm-up)
+Chain 2:                0.411 seconds (Sampling)
+Chain 2:                0.812 seconds (Total)
 Chain 2: </code></pre>
+</div>
+</div>
+</section>
+<section id="fitting-the-model-exercise" class="slide level2">
+<h2>Fitting The Model Exercise</h2>
+<div class="callout callout-warning no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Discussion question</strong></p>
+</div>
+<div class="callout-content">
+<p>Can you come up with <code>stan_glm()</code> from the <code>rstanarm</code> R package to fit this model?</p>
+</div>
 </div>
 </div>
 </section>
@@ -908,8 +921,8 @@ Chain 2: </code></pre>
 <h2>Sources of Variability</h2>
 <ul>
 <li class="fragment"><p>Two sources of variability in <span class="math inline">\(Y_{ij}\)</span>: <span class="math display">\[\begin{eqnarray*}
-Y_{ij} &amp;\overset{i.i.d.}{\sim}&amp; \textrm{Normal}(\mu_j, \sigma) \,\,\, \text{[within-group variability]} \\
-\mu_j &amp;\sim&amp; \textrm{Normal}(\mu, \tau) \,\,\, \text{[between-group variability]}
+Y_{ij} &amp;\overset{i.i.d.}{\sim}&amp; \textrm{Normal}(\mu_j, \sigma^2) \,\,\, \text{[within-group variability]} \\
+\mu_j &amp;\sim&amp; \textrm{Normal}(\mu, \tau^2) \,\,\, \text{[between-group variability]}
 \end{eqnarray*}\]</span></p></li>
 <li class="fragment"><p>To compare these two sources of variability, one can compute the fraction <span class="math display">\[\begin{equation*}
 R = \frac{\tau^2}{\tau^2 + \sigma^2}
