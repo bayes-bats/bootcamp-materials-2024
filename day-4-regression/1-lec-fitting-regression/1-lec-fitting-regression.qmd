@@ -502,7 +502,7 @@ In contrast, the 95% __posterior prediction interval__ for the number of rides _
 
 
 ```{r}
-# Construct 80% posterior credible intervals
+# Construct 95% posterior (predictive) credible intervals
 predict_75 %>% 
   summarize(lower_mu = quantile(mu, 0.025),
             upper_mu = quantile(mu, 0.975),

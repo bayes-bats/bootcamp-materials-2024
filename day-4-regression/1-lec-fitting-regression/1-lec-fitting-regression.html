@@ -564,12 +564,12 @@ Y_i | \beta_0, \beta_1, \sigma &amp; \stackrel{ind}{\sim} N\left(\mu_i, \sigma^2
 <span id="cb8-2"><a href="#cb8-2"></a><span class="fu">neff_ratio</span>(bike_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(Intercept)   temp_feel       sigma 
-    1.00125     0.99885     0.99925 </code></pre>
+    1.03285     1.03505     0.96585 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">rhat</span>(bike_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(Intercept)   temp_feel       sigma 
-  0.9999622   0.9999462   1.0000214 </code></pre>
+  0.9998873   0.9999032   0.9999642 </code></pre>
 </div>
 </div>
 <p>The effective sample size ratios are slightly above 1 and the R-hat values are very close to 1, indicating that the chains are stable, mixing quickly, and behaving much like an independent sample.</p>
@@ -631,15 +631,15 @@ Y_i | \beta_0, \beta_1, \sigma &amp; \stackrel{ind}{\sim} N\left(\mu_i, \sigma^2
 <pre><code># A tibble: 4 × 5
   term        estimate std.error conf.low conf.high
   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept)  -2194.     359.    -2650.    -1739. 
-2 temp_feel       82.2      5.17     75.7      88.6
-3 sigma         1282.      41.0    1231.     1336. 
-4 mean_PPD      3487.      81.3    3382.     3591. </code></pre>
+1 (Intercept)  -2195.     354.    -2646.    -1736. 
+2 temp_feel       82.2      5.07     75.7      88.7
+3 sigma         1282.      40.6    1232.     1336. 
+4 mean_PPD      3487.      81.5    3382.     3593. </code></pre>
 </div>
 </div>
 <p>The <strong>posterior median relationship</strong> is</p>
 <p><span class="math display">\[\begin{equation}
--2194.44 + 82.16 X.
+-2195.31 + 82.22 X.
 \end{equation}\]</span></p>
 </section>
 <section id="section-10" class="slide level2">
@@ -656,9 +656,9 @@ Y_i | \beta_0, \beta_1, \sigma &amp; \stackrel{ind}{\sim} N\left(\mu_i, \sigma^2
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">head</span>(bike_model_df, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  (Intercept) temp_feel    sigma
-1   -2316.070  84.16782 1244.855
-2   -2488.597  87.07960 1306.051
-3   -2490.871  86.29303 1295.093</code></pre>
+1   -2125.091  80.92653 1230.511
+2   -2087.977  80.60855 1200.141
+3   -2265.712  83.64980 1365.039</code></pre>
 </div>
 </div>
 </section>
@@ -678,7 +678,7 @@ Y_i | \beta_0, \beta_1, \sigma &amp; \stackrel{ind}{\sim} N\left(\mu_i, \sigma^2
 <h2></h2>
 <p>Do we have ample posterior evidence that there’s a positive association between ridership and temperature, i.e., that <span class="math inline">\(\beta_1 &gt; 0\)</span>?</p>
 <p><strong>Visual evidence</strong> In our visual examination of 50 posterior plausible scenarios for the relationship between ridership and temperature, <em>all</em> exhibited positive associations.</p>
-<p><strong>Numerical evidence from the posterior credible interval</strong> More rigorously, the 80% credible interval for <span class="math inline">\(\beta_1\)</span> in <code>tidy()</code> summary, (75.7, 88.6), lies entirely and well above 0.</p>
+<p><strong>Numerical evidence from the posterior credible interval</strong> More rigorously, the 80% credible interval for <span class="math inline">\(\beta_1\)</span> in <code>tidy()</code> summary, (75.7, 88.7), lies entirely and well above 0.</p>
 <p><strong>Numerical evidence from a posterior probability</strong> A quick tabulation approximates that there’s <em>almost certainly</em> a positive association, <span class="math inline">\(P(\beta_1 &gt; 0 \; | \; \vec{y}) \approx 1\)</span>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># Tabulate the beta_1 values that exceed 0</span></span>
@@ -694,8 +694,8 @@ Y_i | \beta_0, \beta_1, \sigma &amp; \stackrel{ind}{\sim} N\left(\mu_i, \sigma^2
 <section id="posterior-prediction" class="slide level2">
 <h2>Posterior prediction</h2>
 <p>Suppose a weather report indicates that tomorrow will be a 75-degree day in D.C. What’s your posterior guess of the number of riders that Capital Bikeshare should anticipate?</p>
-<p>Do you think there will be 3968 riders tomorrow?</p>
-<p><span class="math display">\[-2194.44 + 82.16*75 = 3967.56 .\]</span></p>
+<p>Do you think there will be 3971 riders tomorrow?</p>
+<p><span class="math display">\[-2195.31 + 82.22*75 = 3971.19 .\]</span></p>
 </section>
 <section id="section-13" class="slide level2">
 <h2></h2>
@@ -744,35 +744,35 @@ Y_{\text{new}}^{(20000)} \\
 <span id="cb25-2"><a href="#cb25-2"></a>first_set</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  (Intercept) temp_feel    sigma
-1    -2316.07  84.16782 1244.855</code></pre>
+1   -2125.091  80.92653 1230.511</code></pre>
 </div>
 </div>
-<p>Under this particular scenario, <span class="math inline">\(\left(\beta_0^{(1)}, \beta_1^{(1)}, \sigma^{(1)}\right) = (-2316, 84.17, 1245)\)</span>, the average ridership at a given temperature is defined by</p>
-<p><span class="math display">\[\mu = \beta_0^{(1)} + \beta_1^{(1)} X = -2316 + 84.17X  .\]</span></p>
+<p>Under this particular scenario, <span class="math inline">\(\left(\beta_0^{(1)}, \beta_1^{(1)}, \sigma^{(1)}\right) = (-2125, 80.93, 1231)\)</span>, the average ridership at a given temperature is defined by</p>
+<p><span class="math display">\[\mu = \beta_0^{(1)} + \beta_1^{(1)} X = -2125 + 80.93X  .\]</span></p>
 </section>
 <section id="section-15" class="slide level2">
 <h2></h2>
-<p>As such, we’d expect an <strong>average</strong> of <span class="math inline">\(\mu = 3997\)</span> riders on a 75-degree day:</p>
+<p>As such, we’d expect an <strong>average</strong> of <span class="math inline">\(\mu = 3945\)</span> riders on a 75-degree day:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>mu <span class="ot">&lt;-</span> first_set<span class="sc">$</span><span class="st">`</span><span class="at">(Intercept)</span><span class="st">`</span> <span class="sc">+</span> first_set<span class="sc">$</span>temp_feel <span class="sc">*</span> <span class="dv">75</span></span>
 <span id="cb27-2"><a href="#cb27-2"></a>mu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 3996.517</code></pre>
+<pre><code>[1] 3944.398</code></pre>
 </div>
 </div>
 </section>
 <section id="section-16" class="slide level2">
 <h2></h2>
 <p>To capture the <strong>sampling variability</strong> around this average, i.e., the fact that not all 75-degree days have the same ridership, we can simulate our first official prediction <span class="math inline">\(Y_{\text{new}}^{(1)}\)</span> by taking a random draw from the Normal model specified by this first parameter set:</p>
-<p><span class="math display">\[Y_{\text{new}}^{(1)} | \beta_0, \beta_1, \sigma  \; \sim \; N\left(3996.75, 1245^2\right)  .\]</span></p>
+<p><span class="math display">\[Y_{\text{new}}^{(1)} | \beta_0, \beta_1, \sigma  \; \sim \; N\left(3944.75, 1231^2\right)  .\]</span></p>
 <div class="fragment">
-<p>Taking a draw from this model using <code>rnorm()</code>, we happen to observe an above average 4827 rides on the 75-degree day:</p>
+<p>Taking a draw from this model using <code>rnorm()</code>, we happen to observe an above average 4765 rides on the 75-degree day:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">set.seed</span>(<span class="dv">84735</span>)</span>
 <span id="cb29-2"><a href="#cb29-2"></a>y_new <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1</span>, <span class="at">mean =</span> mu, <span class="at">sd =</span> first_set<span class="sc">$</span>sigma)</span>
 <span id="cb29-3"><a href="#cb29-3"></a>y_new</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 4827.125</code></pre>
+<pre><code>[1] 4765.436</code></pre>
 </div>
 </div>
 </div>
@@ -791,9 +791,9 @@ Y_{\text{new}}^{(20000)} \\
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">head</span>(predict_75, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  (Intercept) temp_feel    sigma       mu    y_new
-1   -2316.070  84.16782 1244.855 3996.517 4827.125
-2   -2488.597  87.07960 1306.051 4042.373 3880.632
-3   -2490.871  86.29303 1295.093 3981.106 4992.403</code></pre>
+1   -2125.091  80.92653 1230.511 3944.398 4765.436
+2   -2087.977  80.60855 1200.141 3957.664 3809.038
+3   -2265.712  83.64980 1365.039 4008.023 5073.938</code></pre>
 </div>
 </div>
 <p>Whereas the collection of 20,000 <code>mu</code> values approximates the posterior model for the <em>typical</em> ridership on 75-degree days, <span class="math inline">\(\mu = \beta_0 + \beta_1 * 75\)</span>, the 20,000 <code>y_new</code> values approximate the <strong>posterior predictive model</strong> of ridership for tomorrow, an <em>individual</em> 75-degree day, </p>
@@ -801,9 +801,9 @@ Y_{\text{new}}^{(20000)} \\
 </section>
 <section id="section-18" class="slide level2">
 <h2></h2>
-<p>The 95% credible interval for the <strong>typical</strong> number of rides on a 75-degree day, <span class="math inline">\(\mu\)</span>, ranges from 3841 to 4097. In contrast, the 95% <strong>posterior prediction interval</strong> for the number of rides <em>tomorrow</em> has a much <em>wider</em> range from 1505 to 6501.</p>
+<p>The 95% credible interval for the <strong>typical</strong> number of rides on a 75-degree day, <span class="math inline">\(\mu\)</span>, ranges from 3841 to 4097. In contrast, the 95% <strong>posterior prediction interval</strong> for the number of rides <em>tomorrow</em> has a much <em>wider</em> range from 1492 to 6503.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># Construct 80% posterior credible intervals</span></span>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># Construct 95% posterior (predictive) credible intervals</span></span>
 <span id="cb34-2"><a href="#cb34-2"></a>predict_75 <span class="sc">%&gt;%</span> </span>
 <span id="cb34-3"><a href="#cb34-3"></a>  <span class="fu">summarize</span>(<span class="at">lower_mu =</span> <span class="fu">quantile</span>(mu, <span class="fl">0.025</span>),</span>
 <span id="cb34-4"><a href="#cb34-4"></a>            <span class="at">upper_mu =</span> <span class="fu">quantile</span>(mu, <span class="fl">0.975</span>),</span>
@@ -811,7 +811,7 @@ Y_{\text{new}}^{(20000)} \\
 <span id="cb34-6"><a href="#cb34-6"></a>            <span class="at">upper_new =</span> <span class="fu">quantile</span>(y_new, <span class="fl">0.975</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  lower_mu upper_mu lower_new upper_new
-1  3841.01 4096.544  1505.486  6500.895</code></pre>
+1 3841.078 4096.946  1492.331  6502.669</code></pre>
 </div>
 </div>
 </section>
@@ -859,7 +859,7 @@ Y_{\text{new}}^{(20000)} \\
 <span id="cb38-2"><a href="#cb38-2"></a><span class="fu">posterior_interval</span>(shortcut_prediction, <span class="at">prob =</span> <span class="fl">0.95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      2.5%    97.5%
-1 1505.486 6500.895</code></pre>
+1 1492.331 6502.669</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="co"># Plot the approximate predictive model</span></span>
 <span id="cb40-2"><a href="#cb40-2"></a><span class="fu">mcmc_dens</span>(shortcut_prediction) <span class="sc">+</span> </span>
