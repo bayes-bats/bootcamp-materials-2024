@@ -44,7 +44,7 @@ format:
 
 ## Discussion Questions
 
-We have seen `rstan`, `rstanarm`, and `brms` packages for fitting models. 
+We have seen `rstan`, `rstanarm`, and `brms` packages for fitting models. There is also [JASP](https://us06web.zoom.us/rec/share/tNB9iHxA6G0r_Qpl3alK7u83-BZHPpQrGhH1MTBWr-CyQl9mWJDRYdt75RkZjQNc.VSyb9D6e6tOGRv8M?startTime=1701968510000)^[JASP demo around 37:30]. 
 
 1. Which one of these packages would you use for your own research?
 
