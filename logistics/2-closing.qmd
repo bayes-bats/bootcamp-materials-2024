@@ -13,9 +13,9 @@ format:
     include-after-body: ../templates/clean_title_page.html
 ---
 
-- [Tier 2 Application form](https://duke.qualtrics.com/jfe/form/SV_bmvqDdmb5s0e8yq)
+- [Tier 2 Application form](https://forms.gle/NVdJgQJZy3kV94VY9)
 
-- Tier 2 Application deadline: July 21st
+- Tier 2 Application deadline: July 26th
 
 
 ## Evaluation
@@ -27,11 +27,11 @@ Please fill it out.
 
 Once you fill out the evaluation, it will trigger the finance team regarding the payment. 
 
-If you run into any issues regarding payment, please contact Lisa Stieler <lstieler@ics.uci.edu> and CC Mine Dogucu <mdogucu@uci.edu>
+If you run into any issues regarding payment, please contact Lori Bucky <lbuckey@vassar.edu> and CC Monika Hu <jihu@vassar.edu>
 
-## Next-Year
+## Next Grant?
 
-Please share the [program website](https://www.stat.uci.edu/bayes-bats/) with your colleagues and help us recruit if you can.
+Please get in touch if you interested in being involved in our next grant proposal! 
 
 
 ## Acknowledgement 

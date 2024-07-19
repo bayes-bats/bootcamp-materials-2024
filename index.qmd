@@ -173,17 +173,17 @@ Your GitHub repository: `day4-regression-username`
 | Discussion       | Bayes Course vs. Module          | [{{< fa desktop >}}](day-4-regression/3-dis-bayes-course-vs-module/3-dis-bayes-course-vs-module.html) |
 | Activity         | Designing a Regression Model Lab | [{{< fa desktop >}}](day-4-regression/4-act-regression-lab/4-act-regression-lab.html)                 |
 
-<!-- ## Day 5 - Bayesian modeling: Hierarchical models -->
+## Day 5 - Bayesian modeling: Hierarchical models
 
-<!-- Your GitHub repository: `day5-hierarchical-username` -->
+Your GitHub repository: `day5-hierarchical-username`
 
-<!-- | Type             | Topic                                   | Materials                                                                                                 | -->
-<!-- |-------------------|-----------------------------------|-------------------| -->
-<!-- | Lecture  | Hierarchical Models             | [{{< fa desktop >}}](day-5-hierarchical/1-lec-hierarchical-priors/1-lec-hierarchical-priors.html)         | -->
-<!-- | Lecture | Statistical Inference: frequentist vs. Bayesian | [{{< fa desktop >}}](day-5-hierarchical/2-lec-hypothesis-testing/2-lec-hypothesis-testing.html)             | -->
-<!-- | Discussion       | Software choices for Bayes learners     | [{{< fa desktop >}}](day-5-hierarchical/3-dis-software-choices/3-dis-software-choices.html)               | -->
-<!-- | Activity         | Tier 2 preparation      |  | -->
-<!-- | Closing        | Before We Say Goodbye           | [{{< fa desktop >}}](logistics/2-closing.html)  -->
+| Type             | Topic                                   | Materials                                                                                                 |
+|-------------------|-----------------------------------|-------------------|
+| Lecture  | Hierarchical Models             | [{{< fa desktop >}}](day-5-hierarchical/1-lec-hierarchical/1-lec-hierarchical.html)         |
+| Lecture | Statistical Inference: frequentist vs. Bayesian | [{{< fa desktop >}}](day-5-hierarchical/2-lec-hypothesis-testing/2-lec-hypothesis-testing.html)             |
+| Discussion       | Software choices for Bayes learners     | [{{< fa desktop >}}](day-5-hierarchical/3-dis-software-choices/3-dis-software-choices.html)               |
+| Activity         | Tier 2 preparation      |  |
+| Closing        | Before We Say Goodbye           | [{{< fa desktop >}}](logistics/2-closing.html)
 
 <!-- ## Tier 2 -->
 
